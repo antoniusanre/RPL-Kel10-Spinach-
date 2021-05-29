@@ -1,16 +1,16 @@
-<?php 
+<?php
 session_start();
 
-require 'config/koneksi.php';
+require '..../config/koneksi.php';
 
 // cek masih dalam session atau tidak
-if( isset($_SESSION["login_p"])){
-	header("Location: index.php");
+if (isset($_SESSION["login_p"])) {
+	header("Location: ..../index.php");
 	exit;
 }
 
 // cek masih dalam waktu cookie atau tidak
-if(isset($_COOKIE['III']) && isset($_COOKIE['PII'])){
+if (isset($_COOKIE['III']) && isset($_COOKIE['PII'])) {
 	$id = $_COOKIE['III'];
 	$key = $_COOKIE['PII'];
 
@@ -19,43 +19,42 @@ if(isset($_COOKIE['III']) && isset($_COOKIE['PII'])){
 	$row = mysqli_fetch_assoc($result);
 
 	// cek password bener ga
-	if($key === hash('sha256', $row['username_p'])){
+	if ($key === hash('sha256', $row['username_p'])) {
 		$_SESSION['login'] = true;
 	}
-
 }
 
-if( isset($_POST["login_p"])){
+if (isset($_POST["login_p"])) {
 
 	$username = $_POST["username_p"];
 	$password = $_POST["password_p"];
 
 	$res = mysqli_query($db, "SELECT * FROM penyewa WHERE username_p = '$username'");
 
-	if(mysqli_num_rows($res) === 1){
+	if (mysqli_num_rows($res) === 1) {
 
 		// cek pw
 		$row = mysqli_fetch_assoc($res);
 
-		if(password_verify($password, $row["pw_p"])){
+		if (password_verify($password, $row["pw_p"])) {
 			// set session
 			$_SESSION["login_p"] = true;
 
 			// cek remember me
-			if( isset($_POST['remember'])){
+			if (isset($_POST['remember'])) {
 				// buat cookie
-				setcookie('III', $row['id'], time()+60);
-				setcookie('PII', hash('sha256', $row['username_p']), time()+60);
+				setcookie('III', $row['id'], time() + 60);
+				setcookie('PII', hash('sha256', $row['username_p']), time() + 60);
 			}
 
-			header("Location: index.php");
+			header("Location: ..../index.php");
 			exit;
 		}
 	}
 
 	$error = true;
 }
-header("Location: login.html");
+header("Location: ..../view/login.html");
 
 ?>
 
@@ -128,4 +127,3 @@ header("Location: login.html");
 
 </body>
 </html> -->
-
