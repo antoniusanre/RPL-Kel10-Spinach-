@@ -1,11 +1,11 @@
 <?php
 session_start();
 
-require '..../config/koneksi.php';
+require '../../config/koneksi.php';
 
 // cek masih dalam session atau tidak
 if (isset($_SESSION["login_p"])) {
-	header("Location: ..../index.php");
+	header("Location: ../../index.php");
 	exit;
 }
 
@@ -47,14 +47,14 @@ if (isset($_POST["login_p"])) {
 				setcookie('PII', hash('sha256', $row['username_p']), time() + 60);
 			}
 
-			header("Location: ..../index.php");
+			header("Location: ../../index.php");
 			exit;
 		}
 	}
 
 	$error = true;
 }
-header("Location: ..../view/login.html");
+header("Location: ../../view/login.html");
 
 ?>
 

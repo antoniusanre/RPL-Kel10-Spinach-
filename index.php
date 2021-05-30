@@ -2,7 +2,7 @@
 session_start();
 
 if (!isset($_SESSION["login_p"])) {
-	header("Location: view/login.html");
+	header("Location: view/landingpage.html");
 	exit;
 }
 
@@ -18,7 +18,7 @@ if (!isset($_SESSION["login_p"])) {
 <body>
 	<h1>Welcome to AgriRental</h1>
 
-	<a href="/modul/log/logout.php" title="Logout">Logout</a>
+	<a href="modul/log/logout.php" title="Logout">Logout</a>
 
 </body>
 
