@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../asset/css/signup.css">
+    <script src="https://kit.fontawesome.com/7b2e6c4dc6.js" crossorigin="anonymous"></script>
+    <title>SIGN UP</title>
+</head>
+<body>
+    <div class="signup">
+        <div class="navbar">
+            <a href="landingpage.html"><img src="../asset/img/logo.png" class="logo"></a>
+            <ul>
+                <li><a href="#">Favorit</a></li>
+                <li><a href="#">Notifikasi</a></li>
+                <li><a href="login.html">Masuk</a></li>
+                <li><a href="registrasi.html">Daftar</a></li>
+            </ul>
+        </div>
+    <form action="registrasi.php" method="post" accept-charset="utf-8">
+        <div class="signupForm">
+            <h1>Sign Up</h1>
+            <div class="textbox">
+                <i class="far fa-user"></i>
+                <input type="text" placeholder="Full Name" name="nama_p" value="">
+            </div>
+            <div class="textbox">
+                <i class="fas fa-phone"></i>
+                <input type="number" placeholder="Phone Number" name="telepon_p" value="">
+            </div>
+            <div class="textbox">
+                <i class="far fa-user"></i>
+                <input type="text" placeholder="Username" name="username_p" value="">
+            </div>
+            <div class="textbox">
+                <i class="far fa-envelope"></i>
+                <input type="email" placeholder="Email" name="email_p" value="">
+            </div>
+            <div class="textbox">
+                <i class=""></i>
+                <input type="text" placeholder="Address" name="alamat_p" value="">           
+            </div>
+            <div class="textbox">
+                <i class="fas fa-lock"></i>
+                <input type="password" placeholder="Password" name="password_p" value="">
+            </div>
+            <div class="textbox">
+                <i class="fas fa-lock"></i>
+                <input type="password" placeholder="Confirm Password" name="password_p2" value="">
+            </div>
+            <div class="textbox">
+                <i class=""></i>
+                <label>Male<input type="radio" name="jk" value="M"></label>
+                <label>Female<input type="radio" name="jk" value="F"></label>
+            </div>
+            <button type="submit" name="registrasi_p"><span></span>Sign Up</button>
+            <p>Already have an account? <a href="login.html">Sign In</a></p>
+        </div>
+     </form>
+    </div>
+</body>
+</html>
