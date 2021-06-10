@@ -193,3 +193,41 @@ select {
 .d-block{
     display: block;
 }
+
+.col-a {
+	float: left;
+    width: 45%;
+	text-align: justify;
+	padding-right: 40px;
+	margin-top: 5px;
+	background: none;
+}
+
+.col-b {
+	float: right;
+	width: 45%;
+    text-align: justify;
+	margin-top: 6px;
+	background: none;
+}
+
+.about {
+    position: absolute;
+    top: 250%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+}
+
+.about h1 {
+    font-size: 70px;
+}
+
+.about p {
+    margin: 15px auto;
+    font-weight: 200;
+    font-size: 20px;
+    line-height: 35px;
+    
+}
