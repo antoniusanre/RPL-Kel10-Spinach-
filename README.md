@@ -5,9 +5,13 @@
 • Kelompok : Anre cs
 
 • Asisten Pratikum :
+
     • Bang Ali
+    
     • Bang Ojan
+    
     • Kak Levina
+    
     
 • Deskripsi Singkat :
     Agrirental adalah aplikasi berbasis web sebagai tempat sewa mobil online.
