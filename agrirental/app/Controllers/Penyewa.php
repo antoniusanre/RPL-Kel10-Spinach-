@@ -169,6 +169,9 @@ class Penyewa extends BaseController
     // arahkan ke halaman profile
     public function profile()
     {
+        if (!session()->id) {
+            return redirect()->to('/login');
+        }
         $data = [
             'title' => 'Profile ' . session()->nama,
             'penyewa' => $this->penyewaModel->getPenyewa(session()->id),
@@ -181,45 +184,92 @@ class Penyewa extends BaseController
     public function update()
     {
         $profileLama = $this->penyewaModel->getPenyewa(session()->id);
-        if ($profileLama['username_p'] == $this->request->getVar('username_p'))
 
-
-            // validasi input
-            if (!$this->validate([
-                'username_p' => 'required',
-                'nama_p' => 'required',
-                'jk' => 'required',
-                'telepon_p' => 'required',
-                'email_p' => 'required',
-                'birthdate' => 'required',
-                'pict_p' => [
-                    'rules' => 'max_size[pict_p,1024]|is_image[pict_p]|mime_in[pict_p,image/jpg,image/jpeg,image/png]',
-                    'errors' => [
-                        'max_size' => 'Ukuran gambar terlalu besar (max: 1MB)',
-                        'is_image' => 'Pilih gambar!',
-                        'mime_in' => 'Pilih gambar!'
-
-                    ]
+        // rule khusus username
+        if ($profileLama['username_p'] == $this->request->getVar('username_p')) {
+            $rule_user = 'required';
+        } else {
+            $rule_user = 'required|is_unique[penyewa.username_p]|min_length[6]|max_length[15]|alpha_numeric';
+        }
+        // rule khusus email
+        if ($profileLama['email_p'] == $this->request->getVar('email_p')) {
+            $rule_email = 'required|valid_email';
+        } else {
+            $rule_email = 'required|is_unique[penyewa.email_p]|valid_email';
+        }
+        // validasi input
+        if (!$this->validate([
+            'username_p' => [
+                'rules' => $rule_user,
+                'errors' => [
+                    'required' => 'Username harus diisi!',
+                    'is_unique' => 'Username sudah terdaftar',
+                    'min_length' => 'Panjang minimum username 6 karakter',
+                    'max_length' => 'Panjang maximum username 15 karakter',
+                    'alpha_numeric' => 'Username harus berupa huruf, angka, atau beberapa simbol'
                 ]
-            ])) {
-                $validation = \Config\Services::validation();
-                // dd($validation);
-                return redirect()->to('/penyewa/profile')->withInput()->with('validation', $validation);
-            };
+            ],
+            'nama_p' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Nama Lengkap harus diisi!'
+                ]
+            ],
+            'jk' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Jenis Kelamin harus diisi!'
+                ]
+            ],
+            'telepon_p' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Nomor Telepon harus diisi!'
+                ]
+            ],
+            'email_p' => [
+                'rules' => $rule_email,
+                'errors' => [
+                    'is_unique' => 'Email sudah terdaftar',
+                    'required' => 'Email harus diisi!',
+                    'valid_email' => 'Penulisan email kurang tepat!'
+                ]
+            ],
+            'birthdate' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Tanggal Lahir harus diisi!'
+                ]
+            ],
+            'pict_p' => [
+                'rules' => 'max_size[pict_p,1024]|is_image[pict_p]|mime_in[pict_p,image/jpg,image/jpeg,image/png]',
+                'errors' => [
+                    'max_size' => 'Ukuran gambar terlalu besar (max: 1MB)',
+                    'is_image' => 'Pilih gambar!',
+                    'mime_in' => 'Pilih gambar!'
+
+                ]
+            ]
+        ])) {
+            $validation = \Config\Services::validation();
+            return redirect()->to('/penyewa/profile')->withInput()->with('validation', $validation);
+        };
 
         $fileProfile = $this->request->getFile('pict_p');
-        $namaLama = $this->request->getFile('pict_pl');
-
+        $namaLama = $this->request->getVar('pict_pl');
         //cek gambar, apakah tetap gambar lama
         if ($fileProfile->getError() == 4) {
-            $namaSampul = $this->request->getVar('pict_pl');
+            $namaProfile = $this->request->getVar('pict_pl');
         } else {
             //genereate nama file random
-            $namaSampul = $fileProfile->getRandomName();
+            $namaProfile = $fileProfile->getRandomName();
             //pindahkan gambar
-            $fileProfile->move('img', $namaSampul);
+            $fileProfile->move('img', $namaProfile);
             //hapus file lama
-            unlink('img/', $namaLama);
+            if ($namaLama != 'Profile.png') {
+
+                unlink('img/' . $namaLama);
+            }
         }
 
         // ambil data inputan
@@ -237,6 +287,7 @@ class Penyewa extends BaseController
             'kota_p' => $data['kota_p'],
             'kodepos_p' => $data['kodepos_p'],
             'kecamatan_p' => $data['kecamatan_p'],
+            'pict_p' => $namaProfile
         ]);
 
         // kasih informasi kalau udah berhasil terupdate

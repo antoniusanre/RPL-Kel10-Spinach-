@@ -1,7 +1,6 @@
 <?= $this->extend('layout/template'); ?>
 
 <?= $this->section('content'); ?>
-<link rel="stylesheet" href="/css/signup.css">
 <div class="container-fluid">
     <div class="row">
         <div class="col-2">
@@ -17,91 +16,125 @@
             <div class="row">
                 <h2>Profile Saya</h2>
             </div>
-            <div class="row">
-                <div class="col-2 text-end">
-                    <ul class="list-unstyled">
-                        <li class="mt-4">
-                            <label for="">Nama</label>
-                        </li>
-                        <li class="mt-4">
-                            <label for="">Nomor Telepon</label>
-                        </li>
-                        <li class="mt-4">
-                            <label for="">Username</label>
-                        </li>
-                        <li class="mt-4">
-                            <label for="">Email</label>
-                        </li>
-                        <li class="mt-4">
-                            <label for="">Alamat</label>
-                        </li>
-                        <li class="mt-4">
-                            <label for="">Jenis Kelamin</label>
-                        </li>
-                        <li class="mt-5 mb-3">
-                            <label for="">Tanggal Lahir</label>
-                        </li>
-                    </ul>
-                </div>
+            <div class="row text-dark">
                 <div class="col-6">
                     <form action="/penyewa/update" method="POST" enctype="multipart/form-data">
                         <?= csrf_field(); ?>
+
                         <input type="hidden" , name="pict_pl" value="<?= $penyewa['pict_p']; ?>">
-                        <div class="textbox">
-                            <i class="far fa-user"></i>
-                            <input type="text" placeholder="Nama Lengkap" name="nama_p" value="<?= $penyewa['nama_p']; ?>">
-                        </div>
-                        <div class="textbox">
-                            <i class="fas fa-phone"></i>
-                            <input type="number" placeholder="Nomor Telepon" name="telepon_p" value="<?= $penyewa['telepon_p']; ?>">
-                        </div>
-                        <div class="textbox">
-                            <i class="far fa-user"></i>
-                            <input type="text" placeholder="Username" id="uname" name="username_p" value="<?= $penyewa['username_p']; ?>">
-                        </div>
-                        <div class="textbox">
-                            <i class="far fa-envelope"></i>
-                            <input type="email" placeholder="Email" name="email_p" value="<?= $penyewa['email_p']; ?>">
-                        </div>
-                        <div class="textbox">
-                            <i class="far fa-user"></i>
-                            <input type="text" placeholder="Alamat" id="alamat_p" name="alamat_p" value="<?= $penyewa['alamat_p']; ?>">
-                        </div>
-                        <div class="textbox">
-                            <i class="far fa-user"></i>
-                            <input type="text" placeholder="provinsi" id="provinsi_p" name="provinsi_p" value="<?= $penyewa['provinsi_p']; ?>">
-                        </div>
-                        <div class="textbox">
-                            <i class="far fa-user"></i>
-                            <input type="text" placeholder="kota" id="kota_p" name="kota_p" value="<?= $penyewa['kota_p']; ?>">
-                        </div>
-                        <div class="textbox">
-                            <i class="far fa-user"></i>
-                            <input type="text" placeholder="kecamatan" id="kecamatan_p" name="kecamatan_p" value="<?= $penyewa['kecamatan_p']; ?>">
-                        </div>
-                        <div class="textbox">
-                            <i class="far fa-user"></i>
-                            <input type="text" placeholder="kodepos" id="kodepos_p" name="kodepos_p" value="<?= $penyewa['kodepos_p']; ?>">
-                        </div>
-                        <div class="textbox">
-                            <i class="fas fa-venus-mars"></i>
-                            <select name="jk" style="background: none; border: none; font-size: 18px; width: 70%; float: left; margin: 0 18px; outline: none; color: white; cursor: pointer;">
-                                <option <?= ($penyewa['jk'] == 'M') ? 'selected' : ''; ?> style="color: black;" value="M">Laki-Laki</option>
-                                <option <?= ($penyewa['jk'] == 'F') ? 'selected' : ''; ?> style="color: black;" value="F">Perempuan</option>
-                            </select>
-                        </div>
-                        <div class="textbox">
-                            <i class="far fa-calendar-alt"></i>
-                            <input value="<?= $penyewa['birthdate']; ?>" type="date" name="birthdate">
-                        </div>
 
-                        <div class="col-sm-8">
-                            <div class="input-group mb-3">
-                                <input type="file" class="form-control <?= ($validation->hasError('pict_p')) ? 'is-invalid' : ''; ?>" id="pict_p" name="pict_p" onchange="previewImg()">
+                        <div class="row">
+                            <div class="col-1">
+                                <label>Username</label>
+                            </div>
+                            <div class="col-2">
+                                <input type="text" id="" name="username_p" value="<?= $penyewa['username_p']; ?>">
+                            </div>
+                            <p><?= ($validation->hasError('username_p') ? $validation->getError('username_p') : ''); ?></p>
 
-                                <label class="input-group-text" for="pict_p">Upload</label>
-                                <div class="invalid-feedback">
-                                    <?= $validation->getError('pict_p'); ?>
+                        </div>
+                        <div class="row">
+                            <div class="col-1">
+                                <label>Nomor Telepon</label>
+                            </div>
+                            <div class="col-2">
+                                <input type="text" id="" name="telepon_p" value="<?= $penyewa['telepon_p']; ?>">
+                            </div>
+                            <p><?= ($validation->hasError('telepon_p') ? $validation->getError('telepon_p') : ''); ?></p>
+                        </div>
+                        <div class="row">
+                            <div class="col-1">
+                                <label>Nama Lengkap</label>
+                            </div>
+                            <div class="col-2">
+                                <input type="text" id="" name="nama_p" value="<?= $penyewa['nama_p']; ?>">
+                            </div>
+                            <p><?= ($validation->hasError('nama_p') ? $validation->getError('nama_p') : ''); ?></p>
+                        </div>
+                        <div class="row">
+                            <div class="col-1">
+                                <label>Jenis Kelamin</label>
+                            </div>
+                            <div class="col-2">
+                                <select id="" name="jk">
+                                    <option <?= ($penyewa['jk'] == 'M') ? 'selected' : ''; ?> value="M">Laki-Laki</option>
+                                    <option <?= ($penyewa['jk'] == 'M') ? 'selected' : ''; ?> value="F">Perempuan</option>
+                                </select>
+                            </div>
+                            <p><?= ($validation->hasError('jk') ? $validation->getError('jk') : ''); ?></p>
+                        </div>
+                        <div class="row">
+                            <div class="col-1">
+                                <label>Email</label>
+                            </div>
+                            <div class="col-2">
+                                <input type="email" id="" name="email_p" value="<?= $penyewa['email_p']; ?>">
+                            </div>
+                            <p><?= ($validation->hasError('email_p') ? $validation->getError('email_p') : ''); ?></p>
+                        </div>
+                        <div class="row">
+                            <div class="col-1">
+                                <label>Tanggal Lahir</label>
+                            </div>
+                            <div class="col-2">
+                                <input type="date" id="" name="birthdate" value="<?= $penyewa['birthdate']; ?>">
+                            </div>
+                            <p><?= ($validation->hasError('birthdate') ? $validation->getError('birthdate') : ''); ?></p>
+                        </div>
+                        <div class="row">
+                            <div class="col-1">
+                                <label>Provinsi</label>
+                            </div>
+                            <div class="col-2">
+                                <input type="text" id="" name="provinsi_p" value="<?= $penyewa['provinsi_p']; ?>">
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-1">
+                                <label>Kota/Kabupaten</label>
+                            </div>
+                            <div class="col-2">
+                                <input type="text" id="" name="kota_p" value="<?= $penyewa['kota_p']; ?>">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-1">
+                                <label>Kecamatan</label>
+                            </div>
+                            <div class="col-2">
+                                <input type="text" id="" name="kecamatan_p" value="<?= $penyewa['kecamatan_p']; ?>">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-1">
+                                <label>Kode Pos</label>
+                            </div>
+                            <div class="col-2">
+                                <input type="text" id="" name="kodepos_p" value="<?= $penyewa['kodepos_p']; ?>">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-1">
+                                <label>Alamat Rinci</label>
+                            </div>
+                            <div class="col-3">
+                                <input type="text" id="" name="alamat_p" value="<?= $penyewa['alamat_p']; ?>">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="sampul" class="col-sm-2 col-form-label">Gambar Profil</label>
+                            <div class="col-sm-2">
+                                <img src="/img/<?= $penyewa['pict_p']; ?>" class="img-thumbnail img-preview">
+                            </div>
+                            <div class="col-sm-8">
+                                <div class="input-group mb-3">
+                                    <input type="file" class="form-control <?= ($validation->hasError('pict_p') ? 'is-invalid' : ''); ?>" id="pict_p" name="pict_p" onchange="previewImg()">
+
+                                    <label class="input-group-text" for="pict_p">Upload</label>
+                                    <div class="invalid-feedback">
+                                        <?= $validation->getError('pict_p'); ?>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -109,14 +142,18 @@
                         <?php if (session()->getFlashdata('pesans')) : ?>
                             <p class="alert alert-success "><?= session()->getFlashdata('pesans'); ?></p>
                         <?php endif; ?>
-                    </form>
                 </div>
-                <div class="col-4">
 
-                </div>
+
+
+                </form>
+            </div>
+            <div class="col-4">
+
             </div>
         </div>
     </div>
+</div>
 </div>
 
 <?= $this->endSection(); ?>
