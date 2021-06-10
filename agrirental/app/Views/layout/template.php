@@ -12,11 +12,12 @@
     <title><?= $title; ?></title>
 </head>
 
-<body>
+<body class="bg-dark text-white">
 
     <?= $this->include('layout/navbar'); ?>
-
-    <?= $this->renderSection('content'); ?>
+    <div class="container-fluid">
+        <?= $this->renderSection('content'); ?>
+    </div>
 
 
 

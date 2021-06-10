@@ -31,4 +31,12 @@ class Home extends BaseController
 
 		return view('home/daftar', $data);
 	}
+
+	public function logout()
+	{
+		session_unset();
+		session_destroy();
+
+		return redirect()->to('/');
+	}
 }

@@ -91,6 +91,21 @@
     overflow: hidden;
 }
 
+#landingSearch button {
+    width: 200px;
+    padding: 15px 0;
+    margin: 20px 10px;
+    border-radius: 25px;
+    text-align: center;
+    border: 2px solid #4acfac;
+    font-weight: bold;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
 span {
     background: #4acfac;
     height: 100%;
@@ -105,4 +120,76 @@ span {
 
 button:hover span {
     width: 100%;
+}
+
+#landingSearch {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("Bg2.jpeg");
+}
+
+#tentang {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("Bg3.jpeg");
+}
+
+.form {
+    position: absolute;
+    top: 150%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+}
+
+.form h1 {
+    font-size: 70px;
+}
+
+.form p {
+    margin: 15px auto;
+    font-weight: 100;
+    font-size: 20px;
+    line-height: 25px;
+    
+}
+
+select {
+    font-size: 10px;
+    background: none;
+    font-size: 15px;
+	width: 80%;
+	padding: 10px;
+	border: 1px solid white;
+	border-radius: 5px;
+	resize: vertical;
+}
+
+.col-1 {
+	float: left;
+	text-align: left;
+	padding-right: 40px;
+	margin-top: 5px;
+	background: none;
+}
+
+.col-2 {
+	float: right;
+	width: 30%;
+	margin-top: 6px;
+	background: none;
+}
+
+.d-flex{
+    display: flex;
+    justify-content: space-between;
+}
+
+.d-block{
+    display: block;
 }
