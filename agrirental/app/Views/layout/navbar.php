@@ -17,6 +17,7 @@
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <li><a class="dropdown-item" href="/penyewa/profile">Profile</a></li>
                         <li><a class="dropdown-item" href="#">Orderan Saya</a></li>
+                        <li><a class="dropdown-item" href="/rental">Mitra</a></li>
                         <li><a class="dropdown-item" href="/logout">Keluar</a></li>
                     </ul>
                 </li>

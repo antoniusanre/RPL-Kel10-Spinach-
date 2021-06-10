@@ -251,8 +251,7 @@ class Penyewa extends BaseController
                 ]
             ]
         ])) {
-            $validation = \Config\Services::validation();
-            return redirect()->to('/penyewa/profile')->withInput()->with('validation', $validation);
+            return redirect()->to('/penyewa/profile')->withInput();
         };
 
         $fileProfile = $this->request->getFile('pict_p');
