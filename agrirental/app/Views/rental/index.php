@@ -6,4 +6,5 @@
 <?php if (session()->getFlashdata('pesans')) : ?>
     <p class="alert alert-success "><?= session()->getFlashdata('pesans'); ?></p>
 <?php endif; ?>
+
 <?= $this->endSection(); ?>

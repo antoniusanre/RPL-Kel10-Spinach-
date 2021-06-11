@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Models\PenyewaModel;
+use App\Models\ProdukModel;
 use App\Models\RentalModel;
 
 class Rental extends BaseController
@@ -10,14 +11,21 @@ class Rental extends BaseController
     // deklarasi model
     protected $rentalModel;
     protected $penyewaModel;
+    protected $produkModel;
     protected $rental;
+    protected $produk;
+
+    // constructor
     public function __construct()
     {
         $this->rentalModel = new RentalModel();
         $this->penyewaModel = new PenyewaModel();
+        $this->produkModel = new ProdukModel();
         $this->rental = $this->rentalModel->where(['id_p' => session()->id])->first();
+        $this->produk = $this->produkModel->where(['id_rental' => $this->rental['id_rental']])->findAll();
     }
 
+    // halaman utama rental
     public function index()
     {
         if (!$this->rental) {
@@ -34,6 +42,7 @@ class Rental extends BaseController
         return view('rental/index', $data);
     }
 
+    // form daftar mitra
     public function daftar()
     {
         if ($this->rentalModel->where(['id_p' => session()->id])->first()) {
@@ -47,6 +56,7 @@ class Rental extends BaseController
         return view('rental/daftar', $data);
     }
 
+    // daftar jadi mitra
     public function create()
     {
         // validasi input
@@ -125,7 +135,7 @@ class Rental extends BaseController
         return redirect()->to('/rental');
     }
 
-    // ngarahin ke halaman profile
+    // profile mitra
     public function profile()
     {
         if (!$this->rental) {
@@ -140,7 +150,7 @@ class Rental extends BaseController
         return view('/rental/profile', $data);
     }
 
-    // fungsi untuk update profile
+    // edit profile mitra
     public function update()
     {
         // rule khusus username
@@ -272,6 +282,7 @@ class Rental extends BaseController
         return redirect()->to('/rental');
     }
 
+    // produk mitra
     public function produk()
     {
         if (!$this->rental) {
@@ -281,8 +292,60 @@ class Rental extends BaseController
         $data = [
             'title' => 'Produk Mitra ' . $this->rental['nama_r'],
             'mitra' => $this->rental,
+            'produk' => $this->produk,
             'validation' => \Config\Services::validation(),
         ];
         return view('/rental/produk', $data);
+    }
+
+    // form tambah produk mitra
+    public function tambah()
+    {
+        if (!$this->rental) {
+            return redirect()->to('/rental/daftar');
+        }
+
+        $data = [
+            'title' => ' Tambah Produk Mitra ' . $this->rental['nama_r'],
+            'produk' => $this->produk,
+            'validation' => \Config\Services::validation(),
+        ];
+        return view('/rental/tambah', $data);
+    }
+
+    // detail produk mitra
+    public function ubah()
+    {
+        if (!$this->rental) {
+            return redirect()->to('/rental/daftar');
+        }
+
+        $data = [
+            'title' => ' Detail Produk Mitra ' . $this->rental['nama_r'],
+            'produk' => $this->produk,
+            'validation' => \Config\Services::validation(),
+        ];
+        return view('/rental/ubah', $data);
+    }
+
+    // orderan mitra
+    public function order()
+    {
+        if (!$this->rental) {
+            return redirect()->to('/rental/daftar');
+        }
+
+        $data = [
+            'title' => ' Tambah Produk Mitra ' . $this->rental['nama_r'],
+            'produk' => $this->produk,
+            'order' => $this->order,
+            'validation' => \Config\Services::validation(),
+        ];
+        return view('/rental/order', $data);
+    }
+
+    // detail orderan mitra
+    public function orderDetail()
+    {
     }
 }
