@@ -45,8 +45,7 @@ header ul li a .icon {
 	line-height: 20px;
 	text-align: center;
 }
-.menu {/*
-	border: 1px solid;*/
+.menu {
 	width: 200px;
 	height: 100%;
 	position: fixed;
@@ -225,4 +224,12 @@ a.judul-merk:hover {
 	table {
 		width: 80.3%;
 	}
+}
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
 }
