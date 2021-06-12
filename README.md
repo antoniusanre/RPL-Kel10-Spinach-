@@ -24,7 +24,7 @@
     
     3. Sebagai pengguna yang telah logout, agar dapat menggunakan aplikasi secara personal, saya dapat mengetikkan alamat email dan kata sandi saya untuk masuk ke aplikasi.
     
-    4. Sebagai pengguna yang menawarkan rental mobil, saya ingin orang-orang memberi komentar terhadap rental yang saya berikan agar semakin banyak orang yang percaya dengan          rental saya.
+    4. Sebagai pengguna yang menawarkan rental mobil, saya ingin orang-orang memberi komentar terhadap rental yang saya berikan agar semakin banyak orang yang percaya dengan  rental saya.
     
     5. Mobil saya jarang saya pakai dan hanya sekedar dipanaskan di garasi, untuk itu saya ingin merentalkan mobil saya namun dengan sistem pembayaran dengan jelas.
     
@@ -34,7 +34,7 @@
     
     8. Sebagai pengguna yang belum terdaftar(?), agar dapat menggunakan aplikasi secara maksimal, saya dapat mengisi data untuk daftar ke aplikasi.
     
-    9. Sebagai pengguna produk terdaftar, agar saya bisa membandingkan pilihan satu dengan yang lainnya dengan mudah tanpa perlu mencari ulang dari awal, saya dapat menyimpan        pilihan saya dengan menggunakan fitur simpan.
+    9. Sebagai pengguna produk terdaftar, agar saya bisa membandingkan pilihan satu dengan yang lainnya dengan mudah tanpa perlu mencari ulang dari awal, saya dapat menyimpan  pilihan saya dengan menggunakan fitur simpan.
     
     10. Sebagai pengguna produk terdaftar, agar dapat melihat pilihan yang sudah saya simpan, saya dapat melihatnya di menu ‘keranjang’.
 •
