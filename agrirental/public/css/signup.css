@@ -120,3 +120,12 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
         width: 100%;
     }
 }
+footer {
+    position: fixed;
+    margin: 5px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+}
