@@ -1,8 +1,12 @@
 # Laporan Akhir Projek
 
-• Kelas RPL Paralel 2
+• Kelas RPL :
 
-• Kelompok : Anre cs
+    Paralel 2
+
+• Nama Kelompok :
+
+    Spinach Team
 
 • Asisten Pratikum :
 
