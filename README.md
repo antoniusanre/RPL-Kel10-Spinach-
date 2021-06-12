@@ -19,7 +19,8 @@
     
 • Deskripsi Singkat :
 
-    Agrirental adalah aplikasi berbasis web sebagai tempat sewa mobil online.
+   Rental Mobil adalah aplikasi berbasis web yang menjadi tempat transaksi antara individu yang memiliki mobil sebagai aset untuk disewakan dan orang-orang yang sedang     membutuhkan mobil di suatu tempat tertentu. Terdapat beberapa fitur dalam kemudahan penyewaan mobil antara lain, fitur booking, deskripsi mobil beserta perjalanan hidupnya, pantau ketersediaan mobil, chat, dan fitur review/rate/komentar.
+.
     
 • User Analysis :
 
@@ -42,7 +43,26 @@
     9. Sebagai pengguna produk terdaftar, agar saya bisa membandingkan pilihan satu dengan yang lainnya dengan mudah tanpa perlu mencari ulang dari awal, saya dapat menyimpan pilihan saya dengan menggunakan fitur simpan.
     
     10. Sebagai pengguna produk terdaftar, agar dapat melihat pilihan yang sudah saya simpan, saya dapat melihatnya di menu ‘keranjang’.
-•
+    
+• Spesifikasi Teknis Lingkungan Pengembangan :
+    
+    • Spesifikasi Perangkat Keras :
+    
+        • CPU : AMD Ryzen 9 4900H (3.3 GHz)
+        • GPU : NVIDIA RTX 2060
+        • OS  : Windows
+    
+    • Spesifikasi Perangkat Lunak :
+    
+        • Text Editor : Sublime Text & Visual Studio Code
+        • Browser     : Chrome & Edge
+        
+    • Lainnya :
+        
+        • Version Control & Collaboration Platform  : Github
+        • Project Management Tools                  : Trello
+        • Bahasa yang Digunakan                     : HTML, CSS, PHP
+        • Framework                                 : Code Igniter
 
 •
 
