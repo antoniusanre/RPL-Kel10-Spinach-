@@ -72,19 +72,23 @@
 
 • Hasil dan Pembahasan :
 
-    • Use Case Diagram
+    • Use Case Diagram :
         
-    • Activity Diagram
+    • Activity Diagram :
+     
+    • Class Diagram :
     
-    • Class Diagram
+    • Entity Relationship Diagram :
     
-    • Entity Relationship Diagram
+    • Arsitektur Sistem : 
     
-    • Arsitektur Sistem
+    • Fungsi Utama yang Dikembangkan :
     
-    • Fungsi Utama yang Dikembangkan
+    • Fungsi CRUD :
     
-    • Fungsi CRUD
+       • ![Screenshot (496)](https://user-images.githubusercontent.com/55394766/121784033-c0ed8500-cbdb-11eb-86d3-f45c00bd2c85.png)
+        
+       • ![Screenshot (497)](https://user-images.githubusercontent.com/55394766/121784066-f7c39b00-cbdb-11eb-86aa-1d323939f4a2.png) 
 
 • Hasil Implementasi :
 
