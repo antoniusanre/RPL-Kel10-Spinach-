@@ -31,7 +31,6 @@
 • User Analysis :
 
     1. Sebagai pengguna produk terdaftar, saya ingin mendapatkan peminjaman mobil yang berada di sekitar saya agar saya dapat dengan cepat menjangkau dan mendapatkan sewaan mobil.
-    
     2. Sebagai pengguna produk terdaftar, saya ingin mendapatkan mobil rental yang terbaik agar saya tidak perlu repot-repot mencari dari list yang ada.
     
     3. Sebagai pengguna yang telah logout, agar dapat menggunakan aplikasi secara personal, saya dapat mengetikkan alamat email dan kata sandi saya untuk masuk ke aplikasi.
