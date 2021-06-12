@@ -15,12 +15,18 @@
     • Bang Ojan
     
     • Kak Levina
+
+• Anggota Kelompok :
+
+    • Ahmad Hadryan Mora - G64190001        : Backend Developer
+    • Rafida Nisa Maghfiroh - G64190038     : UI/UX Designer
+    • Faris Ilham Noormandiri - G64190051   : Frontend Developer
+    • Antonius Anre Sianturi - G64190053    : Project Manager
     
     
 • Deskripsi Singkat :
 
    Rental Mobil adalah aplikasi berbasis web yang menjadi tempat transaksi antara individu yang memiliki mobil sebagai aset untuk disewakan dan orang-orang yang sedang     membutuhkan mobil di suatu tempat tertentu. Terdapat beberapa fitur dalam kemudahan penyewaan mobil antara lain, fitur booking, deskripsi mobil beserta perjalanan hidupnya, pantau ketersediaan mobil, chat, dan fitur review/rate/komentar.
-.
     
 • User Analysis :
 
@@ -62,9 +68,35 @@
         • Version Control & Collaboration Platform  : Github
         • Project Management Tools                  : Trello
         • Bahasa yang Digunakan                     : HTML, CSS, PHP
-        • Framework                                 : Code Igniter
+        • Framework                                 : Code Igniter 4
 
-•
+• Hasil dan Pembahasan :
 
-•
+    • Use Case Diagram
+        
+    • Activity Diagram
+    
+    • Class Diagram
+    
+    • Entity Relationship Diagram
+    
+    • Arsitektur Sistem
+    
+    • Fungsi Utama yang Dikembangkan
+    
+    • Fungsi CRUD
 
+• Hasil Implementasi :
+
+    • Screenshot Sistem
+    
+    • Link Aplikasi (klo dah deploy)
+
+• Testing :
+
+    • Positive Cases
+    • Negative Cases (jika ada)
+    
+• Saran untuk Pengembangan Selanjutnya :
+
+    
