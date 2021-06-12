@@ -31,6 +31,7 @@
 • User Analysis :
 
     1. Sebagai pengguna produk terdaftar, saya ingin mendapatkan peminjaman mobil yang berada di sekitar saya agar saya dapat dengan cepat menjangkau dan mendapatkan sewaan mobil.
+    
     2. Sebagai pengguna produk terdaftar, saya ingin mendapatkan mobil rental yang terbaik agar saya tidak perlu repot-repot mencari dari list yang ada.
     
     3. Sebagai pengguna yang telah logout, agar dapat menggunakan aplikasi secara personal, saya dapat mengetikkan alamat email dan kata sandi saya untuk masuk ke aplikasi.
@@ -52,18 +53,15 @@
 • Spesifikasi Teknis Lingkungan Pengembangan :
     
     • Spesifikasi Perangkat Keras :
-    
         • CPU : AMD Ryzen 9 4900H (3.3 GHz)
         • GPU : NVIDIA RTX 2060
         • OS  : Windows
     
     • Spesifikasi Perangkat Lunak :
-    
         • Text Editor : Sublime Text & Visual Studio Code
         • Browser     : Chrome & Edge
         
     • Lainnya :
-        
         • Version Control & Collaboration Platform  : Github
         • Project Management Tools                  : Trello
         • Bahasa yang Digunakan                     : HTML, CSS, PHP
@@ -84,7 +82,6 @@
     • Fungsi Utama yang Dikembangkan :
     
     • Fungsi CRUD :
-    
        • https://github.com/antoniusanre/RPL-Kel10-Spinach-/blob/78e50c265b54d4e3dfe5173c98570b9184641250/asset/img/CRUD_1.png
         
        • https://github.com/antoniusanre/RPL-Kel10-Spinach-/blob/505a46183ec1de100f81a47b07da108c018f4b14/asset/img/CRUD_2.png
