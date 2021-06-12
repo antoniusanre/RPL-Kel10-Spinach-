@@ -86,7 +86,7 @@
     
     • Fungsi CRUD :
     
-       • ![Screenshot (496)](https://user-images.githubusercontent.com/55394766/121784033-c0ed8500-cbdb-11eb-86d3-f45c00bd2c85.png)
+       • https://github.com/antoniusanre/RPL-Kel10-Spinach-/blob/78e50c265b54d4e3dfe5173c98570b9184641250/asset/img/CRUD_1.png
         
        • ![Screenshot (497)](https://user-images.githubusercontent.com/55394766/121784066-f7c39b00-cbdb-11eb-86aa-1d323939f4a2.png) 
 
