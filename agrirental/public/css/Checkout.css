@@ -363,10 +363,10 @@ button:hover {
     transition: .3s;
 }
 footer {
-    margin-top: 550px;
-    font-size: 15px;
-    padding: 20px;
-    color: #F1F6F9;
-    background: none;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
     text-align: center;
 }
