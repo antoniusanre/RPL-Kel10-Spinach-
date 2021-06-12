@@ -88,7 +88,7 @@
     
        • https://github.com/antoniusanre/RPL-Kel10-Spinach-/blob/78e50c265b54d4e3dfe5173c98570b9184641250/asset/img/CRUD_1.png
         
-       • ![Screenshot (497)](https://user-images.githubusercontent.com/55394766/121784066-f7c39b00-cbdb-11eb-86aa-1d323939f4a2.png) 
+       • https://github.com/antoniusanre/RPL-Kel10-Spinach-/blob/505a46183ec1de100f81a47b07da108c018f4b14/asset/img/CRUD_2.png
 
 • Hasil Implementasi :
 
