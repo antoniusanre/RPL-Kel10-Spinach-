@@ -105,15 +105,15 @@
 	        </div>
 	        <div class="row">
 	          <div class="col-1">
-	            <label>Jenis Rental</label>
+	            <label>Foto Produk</label>
 	          </div>
 	          <div class="col-2">
-						<select id="" name="">
-							<option value="" disabled selected></option>
-							<option value="lepaskunci">Lepas Kunci</option>
-							<option value="dropoff">Drop off</option>
-			        	</select>
-			      	</div>
+						<input type="file" name="file" accept="image/*" multiple="multiple" aspect="1" class="poto">
+						<input type="file" name="file" accept="image/*" multiple="multiple" aspect="1" class="poto">
+						<input type="file" name="file" accept="image/*" multiple="multiple" aspect="1" class="poto">
+						<input type="file" name="file" accept="image/*" multiple="multiple" aspect="1" class="poto">
+						<input type="file" name="file" accept="image/*" multiple="multiple" aspect="1" class="poto">
+					</div>
 	        </div>
 	        <div class="row">
 	          <div class="col-1">
@@ -129,15 +129,14 @@
 	        </div>
 	        <div class="row">
 	          <div class="col-1">
-	            <label>Foto Produk</label>
+	            <label>Jenis Rental</label>
 	          </div>
 	          <div class="col-2">
-						<input type="file" name="file" accept="image/*" multiple="multiple" aspect="1" class="poto">
-						<input type="file" name="file" accept="image/*" multiple="multiple" aspect="1" class="poto">
-						<input type="file" name="file" accept="image/*" multiple="multiple" aspect="1" class="poto">
-						<input type="file" name="file" accept="image/*" multiple="multiple" aspect="1" class="poto">
-						<input type="file" name="file" accept="image/*" multiple="multiple" aspect="1" class="poto">
-					</div>
+	          	<input type="checkbox" id="dropoff" name="dropoff" value="dropoff" style="margin-right: 1%;">
+	          	<label for="dropoff" style="margin-right: 9%;">Drop Off</label>
+	          	<input type="checkbox" id="lepaskunci" name="lepaskunci" value="lepaskunci" style="margin-right: 1%;">
+	          	<label for="lepaskunci">Lepas Kunci</label>
+			  </div>
 	        </div>
 	        <div class="tombol">
 	          <a href="">
@@ -146,5 +145,8 @@
 	        </div>
 	      </form>
 	  </div>
+	  <footer>
+	    <p>Copyright Spinach Team</p>
+	  </footer>
 	</body>
 </html>
