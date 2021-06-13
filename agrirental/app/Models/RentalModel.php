@@ -20,4 +20,13 @@ class RentalModel extends Model
             return $this->where(['id_rental' => $id])->first();
         }
     }
+
+    public function getKecamatan()
+    {
+        return $this->db->table('rental')->select('kecamatan_r')->distinct()->get()->getResultArray();
+    }
+    public function getKota()
+    {
+        return $this->db->table('rental')->select('kota_r')->distinct()->get()->getResultArray();
+    }
 }

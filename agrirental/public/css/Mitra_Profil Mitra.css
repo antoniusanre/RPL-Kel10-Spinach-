@@ -1,0 +1,217 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Lato;
+  background-color: #262833;
+  color: white;
+  text-decoration: none;
+}
+header {
+  height: 104px;
+  width: 100%;
+  z-index: 12;
+  position: fixed;
+}
+img.logo {
+  width: 86px;
+  margin-top: 0;
+  margin-left: 25px;
+  position: fixed;
+}
+header ul {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+header ul li {
+  position: relative;
+  width: 100%;
+  list-style: none;
+}
+header ul li a {
+  position: relative;
+  display: block;
+  width: 100%;
+  display: flex;
+  text-decoration: none;
+}
+header ul li a .icon {
+  position: relative;
+  display: block;
+  min-width: 60px;
+  height: 37px;
+  line-height: 20px;
+  text-align: center;
+}
+.menu {
+  width: 200px;
+  height: 100%;
+  position: fixed;
+  top: 105px;
+  font-size: 16px;
+}
+.menu a:hover {
+  opacity: 0.7;
+  transition: 0.3s;
+}
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+.container::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+a {
+  position: absolute;
+  background: none;
+}
+a.sUname {
+  position: fixed;
+  font-size: 17px;
+  float: right;
+  top: 31px;
+  right: 4.8%;
+}
+a.panah {
+  position: fixed;
+  left: 124px;
+  top: 31px;
+}
+a.sAkun2 {
+  position: fixed;
+  font-size: 20px;
+  float: left;
+  margin-top: 29px;
+  margin-left: 145px;
+}
+a.sprofil {
+  position: absolute;
+  font-size: 20px;
+  top: 103px;
+  left: 19%;
+}
+hr.kotak {
+  position: relative;
+  float: right;
+  width: 79%;
+  height: 245px;
+  right: 30px;
+  top: 150px;
+  background: #3c3e4a;
+  border: none;
+}
+hr.kotak2 {
+  position: absolute;
+  width: 28%;
+  height: 105px;
+  left: 22%;
+  top: 180px;
+  background: none;
+  border: 1px solid white;
+}
+a.namatoko {
+  left: 31%;
+  top: 208px;
+  font-size: 16px;
+}
+a.gabung {
+  left: 31%;
+  top: 231px;
+  font-size: 16px;
+}
+hr.kotak3 {
+  position: absolute;
+  width: 28%;
+  height: 35px;
+  left: 22%;
+  top: 286px;
+  background: none;
+  border: 1px solid white;
+}
+hr.kotak4 {
+  position: absolute;
+  width: 28%;
+  height: 35px;
+  left: 22%;
+  top: 322px;
+  background: none;
+  border: 1px solid white;
+}
+a.prod {
+  left: 26%;
+  top: 296px;
+}
+a.nilai {
+  left: 26%;
+  top: 331px;
+}
+a.jumlahprod {
+  right: 52.5%;
+  top: 295px;
+  color: #4acfac;
+}
+a.nilaimitra {
+  right: 52.5%;
+  top: 331px;
+  color: #4acfac;
+}
+.penilaian,
+.pproduk {
+  cursor: pointer;
+}
+.penilaian:hover {
+  opacity: 0.7;
+  transition: 0.3s;
+}
+.pproduk:hover {
+  opacity: 0.7;
+  transition: 0.3s;
+}
+.formform {
+  position: absolute;
+  border-radius: 5px;
+  width: 41%;
+  left: 52%;
+  top: 195px;
+  font-size: 15px;
+  background: none;
+}
+label {
+  padding: 9px 0 12px 0px;
+  display: inline-block;
+  background: none;
+}
+input[type="text"] {
+  background: none;
+  width: 96%;
+  padding: 10px;
+  border: 1px solid white;
+  border-radius: 5px;
+}
+form {
+  background: none;
+}
+.tombol {
+  width: 0;
+  height: 0;
+  border: 1px solid white;
+}
+button {
+  position: absolute;
+  width: 100px;
+  height: 35px;
+  left: 105%;
+  top: 15px;
+  background: #4acfac;
+  border: none;
+  cursor: pointer;
+  border-radius: 25px;
+  font-size: 15px;
+}
+button:hover {
+  opacity: 0.7;
+  transition: 0.3s;
+}

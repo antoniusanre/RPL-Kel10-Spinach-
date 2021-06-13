@@ -3,15 +3,21 @@
 namespace App\Controllers;
 
 use App\Models\PenyewaModel;
+use App\Models\ProdukModel;
+use App\Models\RentalModel;
 use phpDocumentor\Reflection\Types\Null_;
 
 class Penyewa extends BaseController
 {
     // deklarasi model
     protected $penyewaModel;
+    protected $produkModel;
+    protected $rentalModel;
     public function __construct()
     {
         $this->penyewaModel = new PenyewaModel();
+        $this->produkModel = new ProdukModel();
+        $this->rentalModel = new RentalModel();
     }
 
     public function index()
@@ -20,13 +26,24 @@ class Penyewa extends BaseController
         if (!isset(session()->id)) {
             return redirect()->to('/');
         }
+        $keyword1 = $this->request->getVar('kkot');
+        $keyword2 = $this->request->getVar('kkec');
 
+
+
+        if ($keyword1 || $keyword2) {
+            $produk = $this->produkModel->cari($keyword1, $keyword2);
+        } else {
+            $produk = $this->produkModel->getProdukRental();
+        }
         // kirim data ke index
         $data = [
             'title' => 'Welcome ' . session()->nama,
-            'penyewa' => $this->penyewaModel->getPenyewa()
+            'penyewa' => $this->penyewaModel->getPenyewa(session()->id),
+            'produk' => $produk,
+            'kecamatan' => $this->rentalModel->getKecamatan(),
+            'kota' => $this->rentalModel->getKota(),
         ];
-
         return view('penyewa/index', $data);
     }
 
@@ -241,35 +258,35 @@ class Penyewa extends BaseController
                     'required' => 'Tanggal Lahir harus diisi!'
                 ]
             ],
-            'pict_p' => [
-                'rules' => 'max_size[pict_p,1024]|is_image[pict_p]|mime_in[pict_p,image/jpg,image/jpeg,image/png]',
-                'errors' => [
-                    'max_size' => 'Ukuran gambar terlalu besar (max: 1MB)',
-                    'is_image' => 'Pilih gambar!',
-                    'mime_in' => 'Pilih gambar!'
+            // 'pict_p' => [
+            //     'rules' => 'max_size[pict_p,1024]|is_image[pict_p]|mime_in[pict_p,image/jpg,image/jpeg,image/png]',
+            //     'errors' => [
+            //         'max_size' => 'Ukuran gambar terlalu besar (max: 1MB)',
+            //         'is_image' => 'Pilih gambar!',
+            //         'mime_in' => 'Pilih gambar!'
 
-                ]
-            ]
+            //     ]
+            // ]
         ])) {
             return redirect()->to('/penyewa/profile')->withInput();
         };
 
-        $fileProfile = $this->request->getFile('pict_p');
-        $namaLama = $this->request->getVar('pict_pl');
-        //cek gambar, apakah tetap gambar lama
-        if ($fileProfile->getError() == 4) {
-            $namaProfile = $this->request->getVar('pict_pl');
-        } else {
-            //genereate nama file random
-            $namaProfile = $fileProfile->getRandomName();
-            //pindahkan gambar
-            $fileProfile->move('img', $namaProfile);
-            //hapus file lama
-            if ($namaLama != 'Profile.png') {
+        // $fileProfile = $this->request->getFile('pict_p');
+        // $namaLama = $this->request->getVar('pict_pl');
+        // //cek gambar, apakah tetap gambar lama
+        // if ($fileProfile->getError() == 4) {
+        //     $namaProfile = $this->request->getVar('pict_pl');
+        // } else {
+        //     //genereate nama file random
+        //     $namaProfile = $fileProfile->getRandomName();
+        //     //pindahkan gambar
+        //     $fileProfile->move('img', $namaProfile);
+        //     //hapus file lama
+        //     if ($namaLama != 'Profile.png') {
 
-                unlink('img/' . $namaLama);
-            }
-        }
+        //         unlink('img/' . $namaLama);
+        //     }
+        // }
 
         // ambil data inputan
         $data = $this->request->getVar();
@@ -286,13 +303,103 @@ class Penyewa extends BaseController
             'kota_p' => $data['kota_p'],
             'kodepos_p' => $data['kodepos_p'],
             'kecamatan_p' => $data['kecamatan_p'],
-            'pict_p' => $namaProfile
+            // 'pict_p' => $namaProfile
         ]);
+
 
         // kasih informasi kalau udah berhasil terupdate
         session()->setFlashdata('pesans', 'Profile berhasil diperbarui');
 
         // balikin ke halaman profile
         return redirect()->to('/penyewa/profile');
+    }
+
+    // arahkan ke halaman ubah pw
+    public function pw()
+    {
+        if (!session()->id) {
+            return redirect()->to('/login');
+        }
+        $data = [
+            'title' => 'Ubah Password ' . session()->nama,
+            'penyewa' => $this->penyewaModel->getPenyewa(session()->id),
+            'validation' => \Config\Services::validation(),
+        ];
+        return view('/penyewa/pw', $data);
+    }
+
+    // arahkan ke halaman detail produk
+    public function detail()
+    {
+    }
+
+    // arahkan ke halaman checkout
+    public function checkout($id = false)
+    {
+        // cek udah login atau belum dengan session
+        if (!isset(session()->id)) {
+            return redirect()->to('/');
+        }
+        if ($id == false) {
+            return redirect()->to('/penyewa');
+        }
+        $produk = $this->produkModel->getProduk($id);
+        $rental = $this->rentalModel->getRental($produk['id_rental']);
+
+        // kirim data ke checkout
+        $data = [
+            'title' => 'Pesan ' . $produk['judul'],
+            'penyewa' => $this->penyewaModel->getPenyewa(session()->id),
+            'rental' => $rental,
+            'produk' => $produk,
+        ];
+        return view('penyewa/checkout', $data);
+    }
+
+    // fungsi untuk membuat orderan
+    public function pesan()
+    {
+    }
+
+    // arahkan ke halaman history pemesanan
+    public function order()
+    {
+        // cek udah login atau belum dengan session
+        if (!isset(session()->id)) {
+            return redirect()->to('/');
+        }
+
+        // kirim data ke order
+        $data = [
+            'title' => 'Orderan ' . session()->nama_p,
+            'penyewa' => $this->penyewaModel->getPenyewa(session()->id),
+            'produk' => $this->produkModel->where(['o_penyewa' => session()->id]),
+        ];
+        return view('penyewa/order', $data);
+    }
+
+    // arahkan ke halaman detail pemesanan
+    public function orderDetail()
+    {
+    }
+
+    // fungsi untuk update status pemesanan
+    public function orderUpdate()
+    {
+    }
+
+    // arahkan ke halaman favorit
+    public function favorite()
+    {
+    }
+
+    // arahkan ke halaman penilaian
+    public function nilai()
+    {
+    }
+
+    // fungsi update rating
+    public function rating()
+    {
     }
 }

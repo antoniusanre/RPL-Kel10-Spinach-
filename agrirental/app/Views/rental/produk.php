@@ -1,6 +1,6 @@
 <?= $this->extend('layout/templater'); ?>
 <?= $this->section('content'); ?>
-
+<link rel="stylesheet" href="/css/Mitra_1Produk.css">
 
 
 <a class="sProduk">0 Produk</a>
@@ -30,7 +30,7 @@
                 <td style="padding-left: 4.6%; width: 17.9%;"><a href="" class="judul-merk"><?= $p['judul']; ?><br><?= $p['merk']; ?> - <?= $p['jenis']; ?></a></td>
                 <td style="padding-left: 1.4%; width: 9%;">Rp <?= $p['harga']; ?></td>
                 <td style="padding-left: 1.4%; width: 9%;">3</td>
-                <td style="padding-left: 1.4%; width: 10.3%;">Selesai<a href="/rental/ubah/<?= $p['id_produk']; ?>" class="ubahapus">Ubah</a><br><a href="" class="ubahapus">Hapus</a></td>
+                <td style="padding-left: 1.4%; width: 10.3%;">Selesai<a href="/rental/ubah/<?= $p['id_produk']; ?>" class="ubahapus">Ubah</a><br><a href="/rental/hapus/<?= $p['id_produk']; ?>" class="ubahapus">Hapus</a></td>
             </tr>
         <?php endforeach; ?>
     </table>

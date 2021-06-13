@@ -67,7 +67,7 @@ header ul li a .icon {
 }
 a.sUname {
 	position: fixed;
-	font-size: 17px;
+	font-size: 16px;
 	float: right;
 	top: 31px;
 	right: 4.8%;
@@ -83,9 +83,6 @@ a.sAkun2 {
 	float: left;
 	margin-top: 29px;
 	margin-left: 145px;
-}
-.produk {
-	color: #4ACFAC;
 }
 a.sProduk {
 	position: fixed;
@@ -122,6 +119,45 @@ a.sUbah {
 	line-height: 17px;
 	background: none;
 }
+hr.kotak2 {
+	position: absolute;
+	width: 79%;
+	height: 57px;
+	right: 30px;
+	top: 160px;
+	background: #3C3E4A;
+	border: none;
+}
+a.nproduk {
+	position: absolute;
+	font-size: 14px;
+	margin-left: 314px;
+	margin-top: 177px;
+	background: none;
+}
+a.h12jam {
+	position: absolute;
+	font-size: 14px;
+	width: 92px;
+	margin-left: 592px;
+	margin-top: 177px;
+	background: none;
+}
+a.jmlsewa {
+	position: absolute;
+	font-size: 14px;
+	width: 98px;
+	margin-left: 779px;
+	margin-top: 177px;
+	background: none;
+}
+a.stat {
+	position: absolute;
+	font-size: 14px;
+	margin-left: 997px;
+	margin-top: 177px;
+	background: none;
+}
 a.takde {
 	position: absolute;
 	font-size: 16px;
@@ -148,6 +184,31 @@ table {
 .judul th {
 	text-align: left;
 	background-color: #3C3E4A;
+}
+.isi table {
+	position: absolute;
+	height: 75px;
+	top: 217px;
+}
+.isi td {
+	background: none;
+	border-bottom: 1px solid #3C3E4A;
+	vertical-align: top;
+	padding-top: 15px;
+}
+.isi tr {
+	height: 80px;
+}
+a.judul-merk:hover {
+	opacity: 0.7;
+	transition: .3s;
+}
+a.cek {
+	color: #4ACFAC;
+}
+a.cek:hover {
+	opacity: 0.7;
+	transition: .3s;
 }
 
 @media screen and (max-width: 600px) {

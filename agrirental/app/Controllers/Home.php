@@ -15,6 +15,9 @@ class Home extends BaseController
 
 	public function login()
 	{
+		if (session()->id) {
+			return redirect()->to('/penyewa');
+		}
 		$data = [
 			'title' => 'Login'
 		];

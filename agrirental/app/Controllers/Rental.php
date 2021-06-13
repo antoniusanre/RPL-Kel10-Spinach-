@@ -45,7 +45,7 @@ class Rental extends BaseController
             'validation' => \Config\Services::validation(),
         ];
 
-        return view('rental/index', $data);
+        return view('rental/profile', $data);
     }
 
     // form daftar mitra
@@ -703,11 +703,60 @@ class Rental extends BaseController
         }
 
         $data = [
-            'title' => ' Tambah Produk Mitra ' . $this->rental['nama_r'],
+            'title' => ' Detail Orderan Mitra ' . $this->rental['nama_r'],
             'produk' => $this->produk,
             'order' => $this->order,
             'validation' => \Config\Services::validation(),
         ];
         return view('/rental/orderDetail', $data);
+    }
+
+    // update status orderan
+    public function orderUpdate()
+    {
+    }
+
+    // hapus produk
+    public function hapus($id = false)
+    {
+        if (!$this->rental) {
+            return redirect()->to('/rental/daftar');
+        }
+        if ($id == false) {
+            return redirect()->to('/rental/produk');
+        }
+        if (session()->id != $this->rental['id_p']) {
+            return redirect()->to('/rental');
+        }
+        if ($id) {
+            //cari nama file dari id
+            $produk = $this->produkModel->find($id);
+            //cek if default
+            if ($produk['pict_prod']) {
+                //hapus gambar
+                unlink('img/' . $produk['pict_prod']);
+            }
+            if ($produk['pict_prod2']) {
+                //hapus gambar
+                unlink('img/' . $produk['pict_prod2']);
+            }
+            if ($produk['pict_prod3']) {
+                //hapus gambar
+                unlink('img/' . $produk['pict_prod3']);
+            }
+            if ($produk['pict_prod4']) {
+                //hapus gambar
+                unlink('img/' . $produk['pict_prod4']);
+            }
+            if ($produk['pict_prod5']) {
+                //hapus gambar
+                unlink('img/' . $produk['pict_prod5']);
+            }
+
+            $this->produkModel->delete($id);
+            session()->setFlashdata('pesans', 'Produk berhasil dihapus.');
+
+            return redirect()->to('/rental/produk');
+        }
     }
 }

@@ -19,7 +19,7 @@
             <div class="col-1">
                 <label>Judul Produk</label>
             </div>
-            <div class="col-2">
+            <div class="col-3">
                 <input type="text" id="" name="judul" placeholder="Max 100 karakter" value="<?= $produk['judul']; ?>">
             </div>
             <p><?= ($validation->hasError('judul') ? $validation->getError('judul') : ''); ?></p>
@@ -29,7 +29,7 @@
             <div class="col-1">
                 <label>Deskripsi Produk</label>
             </div>
-            <div class="col-2">
+            <div class="col-3">
                 <textarea id="" name="deskripsi" style="height:150px" placeholder="Max 1000 karakter"><?= $produk['deskripsi']; ?></textarea>
             </div>
             <p><?= ($validation->hasError('deskripsi') ? $validation->getError('deskripsi') : ''); ?></p>
@@ -39,7 +39,7 @@
             <div class="col-1">
                 <label>Merek</label>
             </div>
-            <div class="col-3">
+            <div class="col-2">
                 <input type="text" id="" name="merk" placeholder="Contoh: Toyota" value="<?= $produk['merk']; ?>">
             </div>
             <p><?= ($validation->hasError('merk') ? $validation->getError('merk') : ''); ?></p>
@@ -49,7 +49,7 @@
             <div class="col-1">
                 <label>Jenis</label>
             </div>
-            <div class="col-3">
+            <div class="col-2">
                 <input type="text" id="" name="jenis" placeholder="Contoh: Kijang Innova" value="<?= $produk['jenis']; ?>">
             </div>
             <p><?= ($validation->hasError('jenis') ? $validation->getError('jenis') : ''); ?></p>
@@ -59,7 +59,7 @@
             <div class="col-1">
                 <label>Harga</label>
             </div>
-            <div class="col-3">
+            <div class="col-2">
                 <input type="text" id="" name="harga" placeholder="/12Jam (Contoh: 750000)" value="<?= $produk['harga']; ?>">
             </div>
             <p><?= ($validation->hasError('harga') ? $validation->getError('harga') : ''); ?></p>
@@ -69,7 +69,7 @@
             <div class="col-1">
                 <label>Tahun Keluaran</label>
             </div>
-            <div class="col-3">
+            <div class="col-2">
                 <input type="text" id="" name="tahun" value="<?= $produk['tahun']; ?>">
             </div>
             <p><?= ($validation->hasError('tahun') ? $validation->getError('tahun') : ''); ?></p>
@@ -79,7 +79,7 @@
             <div class="col-1">
                 <label>Jenis Rental</label>
             </div>
-            <div class="col-3">
+            <div class="col-2">
                 <select id="" name="jenis_rental">
                     <option <?= ($produk['jenis_rental'] == 'l') ? 'selected' : ''; ?> value="l">Lepas Kunci</option>
                     <option <?= ($produk['jenis_rental'] == 'd') ? 'selected' : ''; ?> value="d">Drop off</option>
@@ -92,7 +92,7 @@
             <div class="col-1">
                 <label for="jenisrental">Plat Nomor</label>
             </div>
-            <div class="col-3">
+            <div class="col-2">
                 <select id="" name="plat">
                     <option <?= ($produk['plat'] == 'ganjil') ? 'selected' : ''; ?> value="ganjil">Ganjil</option>
                     <option <?= ($produk['plat'] == 'genap') ? 'selected' : ''; ?> value="genap">Genap</option>
@@ -105,7 +105,7 @@
             <div class="col-1">
                 <label>Foto Produk</label>
             </div>
-            <div class="col-3">
+            <div class="col-2">
                 <input type="file" name="pict_prod" accept="image/*" multiple="multiple" aspect="1" class="poto" value="<?= $produk['pict_prod'];; ?>">
                 <p><?= ($validation->hasError('pict_prod') ? $validation->getError('pict_prod') : ''); ?></p>
 

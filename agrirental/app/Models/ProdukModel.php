@@ -20,4 +20,13 @@ class ProdukModel extends Model
             return $this->where(['id_produk' => $id])->first();
         }
     }
+
+    public function getProdukRental()
+    {
+        return $this->db->table('produk')->join('rental', 'produk.id_rental=rental.id_rental')->get()->getResultArray();
+    }
+
+    public function cari($k1 = false, $k2 = false)
+    {
+    }
 }

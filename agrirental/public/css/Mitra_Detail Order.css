@@ -1,0 +1,353 @@
+* {
+	padding: 0;
+	margin: 0;
+	font-family: Lato;
+	background-color: #262833;
+	color: white;
+	text-decoration: none;
+}
+header {
+	height: 104px;
+	width: 100%;
+	z-index: 12;
+	position: fixed;
+
+}
+img.logo {
+	width: 86px;
+	margin-top: 0;
+	margin-left: 25px;
+	position: fixed;
+}
+header ul {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+header ul li {
+	position: relative;
+	width: 100%;
+	list-style: none;
+}
+header ul li a {
+	position: relative;
+	display: block;
+	width: 100%;
+	display: flex;
+	text-decoration: none;
+}
+header ul li a .icon {
+	position: relative;
+	display: block;
+	min-width: 60px;
+	height: 37px;
+	line-height: 20px;
+	text-align: center;
+}
+.menu {
+	width: 200px;
+	height: 100%;
+	position: fixed;
+	top: 105px;
+	font-size: 16px;
+}
+.menu a:hover {
+	opacity: 0.7;
+	transition: .3s;
+}
+.container {
+	width: 100%;
+	margin: 0 auto;
+}
+.container::after {
+	content: '';
+	display: block;
+	clear: both;
+}
+a {
+	position: absolute;
+	background: none;
+}
+a.sUname {
+	position: fixed;
+	font-size: 17px;
+	float: right;
+	top: 31px;
+	right: 4.8%;
+}
+a.panah {
+	position: fixed;
+	left: 124px;
+	top: 31px;
+}
+a.sAkun2 {
+	position: fixed;
+	font-size: 20px;
+	float: left;
+	margin-top: 29px;
+	margin-left: 145px;
+}
+a.panah2 {
+	position: fixed;
+	left: 235px;
+	top: 32px;
+}
+a.srincian {
+	position: fixed;
+	font-size: 20px;
+	float: left;
+	margin-top: 29px;
+	margin-left: 256px;
+}
+hr.kotak {
+	position: absolute;
+	width: 79.2%;
+	height: 47px;
+	right: 28px;
+	top: 103px;
+	background: #3C3E4A;
+	border: none;
+}
+a.sstatus {
+	left: 21.6%;
+	top: 117px;
+	font-size: 16px;
+	font-weight: bold;
+}
+a.status {
+	left: 29.3%;
+	top: 117px;
+	font-size: 16px;
+	text-transform: uppercase;
+	color: #4ACFAC;
+}
+.garis {
+    position: relative;
+    width: 0px;
+    height: 30px;
+    left: 27%;
+    top: 111px;
+    border: 1px solid #262833;
+}
+hr.kotak2 {
+	position: absolute;
+	width: 79.2%;
+	height: 237px;
+	right: 28px;
+	top: 165px;
+	background: #3C3E4A;
+	border: none;
+}
+a.order {
+	left: 21.6%;
+	top: 185px;
+	font-weight: bold;
+}
+a.noorder {
+	left: 33%;
+	top: 185px;
+}
+.garis2 {
+	position: relative;
+    width: 0px;
+    height: 40px;
+    left: 30%;
+    top: 142px;
+    border: 1px solid #262833;
+}
+hr.garis3 {
+	position: relative;
+    width: 76.3%;
+    left: 20%;
+    top: 150px;
+    border: 1px solid #262833;
+}
+a.alamat {
+	left: 21.6%;
+	top: 298px;
+	font-weight: bold;
+}
+.garis4 {
+	position: relative;
+    width: 0px;
+    height: 155px;
+    left: 30%;
+    top: 160px;
+    border: 1px solid #262833;
+}
+a.namalengkap {
+	left: 33%;
+	top: 240px;
+}
+a.notelp {
+	left: 33%;
+	top: 265px;
+}
+a.detail {
+	left: 33%;
+	top: 290px;
+}
+a.kotakab {
+	left: 33%;
+	top: 315px;
+}
+a.provinsi {
+	left: 33%;
+	top: 340px;
+}
+a.kodepos {
+	left: 33%;
+	top: 365px;
+}
+hr.kotak3 {
+	position: absolute;
+	width: 79.2%;
+	height: 143px;
+	right: 28px;
+	top: 420px;
+	background: #3C3E4A;
+	border: none;
+}
+a.jrent {
+	left: 21.6%;
+	top: 440px;
+	font-weight: bold;
+}
+a.jenis {
+	left: 35%;
+	top: 440px;
+}
+.garis5 {
+	position: relative;
+    width: 0px;
+    height: 38px;
+    left: 32%;
+    top: 198px;
+    border: 1px solid #262833;
+}
+hr.garis6 {
+	position: relative;
+    width: 76.3%;
+    left: 20%;
+    top: 205px;
+    border: 1px solid #262833;
+}
+a.tgl {
+	left: 21.6%;
+	top: 507px;
+	font-weight: bold;
+}
+.col-1 {
+	position: absolute;
+    float: left;
+    margin-left: 35%;
+    width: 20%;
+    margin-top: 160px;
+    background: none;
+}
+.col-2 {
+	position: absolute;
+    float: left;
+    margin-left: 63%;
+    width: 20%;
+    margin-top: 160px;
+    background: none;
+}
+input[type=datetime-local], textarea {
+    background: none;
+    width: 95%;
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 5px;
+    resize: vertical;
+}
+.garis7 {
+	position: relative;
+    width: 0px;
+    height: 61px;
+    left: 32%;
+    top: 212px;
+    border: 1px solid #262833;
+}
+a.sampai {
+    position: absolute;
+    left: 59%;
+    top: 500px;
+    font-size: 30px;
+    background: none;
+    font-weight: bold;
+}
+hr.kotak4 {
+	position: absolute;
+	width: 79.2%;
+	height: 53px;
+	right: 28px;
+	top: 580px;
+	background: #3C3E4A;
+	border: none;
+}
+a.username {
+	left: 25%;
+	top: 596px;
+}
+hr.kotak5 {
+	position: absolute;
+	width: 79.2%;
+	height: 250px;
+	right: 28px;
+	top: 649px;
+	background: #3C3E4A;
+	border: none;
+}
+a.info {
+	left: 21.6%;
+	top: 670px;
+	font-weight: bold;
+}
+a.judulproduk {
+	left: 29%;
+	top: 709px;
+}
+a.merekjenis {
+	left: 29%;
+	top: 729px;
+}
+a.totalharga {
+	right: 5%;
+	top: 709px;
+}
+hr.garis8 {
+	position: relative;
+    width: 76.3%;
+    left: 20%;
+    top: 470px;
+    border: 1px solid #262833;
+}
+a.pesan {
+	left: 21.6%;
+	top: 825px;
+}
+.col-3 {
+    position: absolute;
+    float: left;
+    margin-left: 27%;
+    width: 30%;
+    margin-top: 480px;
+    background: none;
+}
+a.metpem {
+	left: 77%;
+	top: 825px;
+	padding-bottom: 100px;
+}
+
+@media screen and (max-width: 690px) {
+	img {
+		width: 100%;
+	}
+	a.srincian {
+		width: 100px;
+		margin-left: 256px;
+	}
+}
