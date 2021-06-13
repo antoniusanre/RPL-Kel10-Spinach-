@@ -126,7 +126,7 @@ a.takde {
 	position: absolute;
 	font-size: 16px;
 	width: 121px;
-	margin-left: 684px;
+	margin-left: 51%;
 	margin-top: 267px;
 }
 .edit i {
@@ -203,4 +203,13 @@ table {
 	hr.kotak2 {
 		width: 85%;
 	}
+}
+footer {
+    position: fixed;
+    margin: 5px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
 }

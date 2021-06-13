@@ -68,7 +68,7 @@ header ul li a .icon {
 }
 a.sUname {
 	position: fixed;
-	font-size: 16px;
+	font-size: 17px;
 	float: right;
 	top: 31px;
 	right: 4.8%;
@@ -101,12 +101,11 @@ hr.kotak {
 	position: relative;
 	float: right;
 	width: 78.7%;
-	height: 680px;
+	height: 710px;
 	right: 30px;
 	top: 103px;
 	background: #3C3E4A;
 	border: none;
-	padding-bottom: 100px;
 }
 a.sstambah {
 	position: absolute;
@@ -120,7 +119,7 @@ a.sstambah {
 .formform {
 	position: absolute;
 	border-radius: 5px;
-	width: 60%;
+	width: 61%;
 	left: 29%;
 	top: 195px;
 	font-size: 15px;
@@ -168,7 +167,7 @@ button {
 	width: 100px;
 	height: 35px;
 	left: 41%;
-	top: 610px;
+	top: 550px;
 	background: #4ACFAC;
 	border: none;
 	cursor: pointer;
@@ -178,4 +177,13 @@ button {
 button:hover {
 	opacity: 0.7;
 	transition: .3s;
+}
+footer {
+    position: fixed;
+    margin: 5px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
 }

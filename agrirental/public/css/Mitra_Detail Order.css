@@ -262,6 +262,19 @@ input[type=datetime-local], textarea {
     border-radius: 5px;
     resize: vertical;
 }
+select {
+	position: absolute;
+	background: none;
+    width: 8%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    resize: vertical;
+    left: 28%;
+    top: 107px;
+    font-size: 16px;
+    cursor: pointer;
+}
 .garis7 {
 	position: relative;
     width: 0px;
@@ -272,7 +285,7 @@ input[type=datetime-local], textarea {
 }
 a.sampai {
     position: absolute;
-    left: 59%;
+    left: 49%;
     top: 500px;
     font-size: 30px;
     background: none;
@@ -337,17 +350,44 @@ a.pesan {
     background: none;
 }
 a.metpem {
-	left: 77%;
+	left: 70%;
 	top: 825px;
 	padding-bottom: 100px;
 }
-
-@media screen and (max-width: 690px) {
-	img {
-		width: 100%;
-	}
-	a.srincian {
-		width: 100px;
-		margin-left: 256px;
-	}
+footer {
+    position: fixed;
+    margin: 5px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+}
+button {
+    position: absolute;
+    width: 125px;
+    height: 25px;
+    left: 38%;
+    top: 115px;
+    background: #4ACFAC;
+    border: none;
+    cursor: pointer;
+    border-radius: 25px;
+    font-size: 15px;
+}
+button:hover {
+    opacity: 0.7;
+    transition: .3s;
+}
+a.tgldari {
+	left: 35%;
+	top: 508px;
+}
+a.tglsampai {
+	left: 54%;
+	top: 508px;
+}
+a.pesantext {
+	left: 27%;
+	top: 825px;
 }

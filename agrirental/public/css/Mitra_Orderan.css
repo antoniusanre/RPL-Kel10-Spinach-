@@ -67,7 +67,7 @@ header ul li a .icon {
 }
 a.sUname {
 	position: fixed;
-	font-size: 16px;
+	font-size: 17px;
 	float: right;
 	top: 31px;
 	right: 4.8%;
@@ -88,7 +88,7 @@ a.sProduk {
 	position: fixed;
 	font-size: 20px;
 	top: 103px;
-	left: 19%;
+	right: 74.7%;
 }
 .edit {
 	width: 0px;
@@ -98,75 +98,12 @@ a.sProduk {
 .edit:hover {
 	opacity: 0.8;
 }
-hr.kotak {
-	position: fixed;
-	width: 180px;
-	height: 32px;
-	float: right;
-	right: 30px;
-	top: 105px;
-	border: none;
-	background: #4ACFAC;
-	border-radius: 10px;
-}
-a.sUbah {
-	position: absolute;
-	width: 130px;
-	float: right;
-	right: 45px;
-	top: 110.5px;
-	font-size: 14px;
-	line-height: 17px;
-	background: none;
-}
-hr.kotak2 {
-	position: absolute;
-	width: 79%;
-	height: 57px;
-	right: 30px;
-	top: 160px;
-	background: #3C3E4A;
-	border: none;
-}
-a.nproduk {
-	position: absolute;
-	font-size: 14px;
-	margin-left: 314px;
-	margin-top: 177px;
-	background: none;
-}
-a.h12jam {
-	position: absolute;
-	font-size: 14px;
-	width: 92px;
-	margin-left: 592px;
-	margin-top: 177px;
-	background: none;
-}
-a.jmlsewa {
-	position: absolute;
-	font-size: 14px;
-	width: 98px;
-	margin-left: 779px;
-	margin-top: 177px;
-	background: none;
-}
-a.stat {
-	position: absolute;
-	font-size: 14px;
-	margin-left: 997px;
-	margin-top: 177px;
-	background: none;
-}
 a.takde {
 	position: absolute;
 	font-size: 16px;
 	width: 121px;
-	margin-left: 684px;
+	margin-left: 51%;
 	margin-top: 267px;
-}
-.edit i {
-	float: right;
 }
 table {
 	width: 79%;
@@ -185,58 +122,12 @@ table {
 	text-align: left;
 	background-color: #3C3E4A;
 }
-
-@media screen and (max-width: 600px) {
-	img {
-		width: 100%;
-	}
-	hr.kotak {
-		margin-left: 87.4%;
-		width: 40px;
-		height: 32px;
-	}
-	a.sUbah {
-		display: none;
-	}
-	.edit i {
-		margin-right: -141px;
-		margin-top: 1px;
-	}
-	hr.kotak2 {
-		right: 0;
-		position: fixed;
-		width: 100%;
-	}
-	a.sProduk {
-		left: 200px;
-	}
-}
-@media screen and (min-width: 601px) and (max-width: 1200px) {
-	img {
-		width: 100%;
-	}
-	hr.kotak {
-		margin-left: 80%;
-	}
-	hr.kotak2 {
-		right: 0;
-		position: fixed;
-		width: 100%;
-	}
-	a.sProduk {
-		left: 200px;
-	}
-}
-@media screen and (min-width: 1201px) and (max-width: 1370px) {
-	img {
-		width: 100%;
-	}
-}
-@media screen and (min-width: 1371px) {
-	img {
-		width: 100%;
-	}
-	hr.kotak2 {
-		width: 85%;
-	}
+footer {
+    position: fixed;
+    margin: 5px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
 }

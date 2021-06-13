@@ -88,7 +88,7 @@ a.sProduk {
 	position: absolute;
 	font-size: 20px;
 	top: 103px;
-	left: 19%;
+	right: 75.4%;
 }
 .edit {
 	width: 0px;
@@ -166,7 +166,6 @@ a.judul-merk:hover {
 	opacity: 0.7;
 	transition: .3s;
 }
-
 @media screen and (max-width: 600px) {
 	img {
 		width: 100%;
@@ -183,7 +182,7 @@ a.judul-merk:hover {
 		margin-right: -141px;
 		margin-top: 1px;
 	}
-	table {
+	hr.kotak2 {
 		right: 0;
 		position: fixed;
 		width: 100%;
@@ -199,7 +198,7 @@ a.judul-merk:hover {
 	hr.kotak {
 		margin-left: 80%;
 	}
-	table {
+	hr.kotak2 {
 		right: 0;
 		position: fixed;
 		width: 100%;
@@ -217,7 +216,16 @@ a.judul-merk:hover {
 	img {
 		width: 100%;
 	}
-	table {
-		width: 80.3%;
+	hr.kotak2 {
+		width: 85%;
 	}
+}
+footer {
+    position: fixed;
+    margin: 5px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
 }
