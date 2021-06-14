@@ -80,6 +80,7 @@
    • Class Diagram :
    
    • Entity Relationship Diagram :
+   ![ERD](https://user-images.githubusercontent.com/78836288/121841140-f4c5c900-cd07-11eb-85be-de424abe9db0.jpeg)
     
    • Arsitektur Sistem : 
     
