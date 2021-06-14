@@ -3,15 +3,19 @@
   • Kelompok 10
 ## Asisten Pratikum :
    • Levina Siatono - G64180019
-   • Ali Naufal Amrullah - G64180080    
+   
+   • Ali Naufal Amrullah - G64180080  
+   
    • Muhammad Fauzan Ramadhan - G64180117
 
-• Anggota Kelompok :
-
-    • Ahmad Hadryan Mora - G64190001        : Backend Developer
-    • Rafida Nisa Maghfiroh - G64190038     : UI/UX Designer
-    • Faris Ilham Noormandiri - G64190051   : Frontend Developer
-    • Antonius Anre Sianturi - G64190053    : Project Manager
+## Anggota Kelompok :
+   • Ahmad Hadryan Mora - G64190001        : Backend Developer
+   
+   • Rafida Nisa Maghfiroh - G64190038     : UI/UX Designer
+   
+   • Faris Ilham Noormandiri - G64190051   : Frontend Developer
+   
+   • Antonius Anre Sianturi - G64190053    : Project Manager
     
     
 • Deskripsi Singkat :
