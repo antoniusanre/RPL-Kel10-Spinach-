@@ -110,6 +110,8 @@
    
    ### Class Diagram
    
+   ![classDiagram](https://user-images.githubusercontent.com/55394766/121971363-c34e0b80-cda2-11eb-9e77-2fe4bfbbc749.jpeg)
+   
    ### Entity Relationship Diagram
    
    ![ERD_2](https://user-images.githubusercontent.com/55394766/121966663-394d7500-cd99-11eb-9360-02a6b683caeb.jpeg)
