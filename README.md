@@ -105,7 +105,7 @@
    
    ![activityDiagramLogout](https://user-images.githubusercontent.com/55394766/121841766-3440e500-cd09-11eb-9b66-f22943edd072.jpeg)
    
-   #### • ORder Produk
+   #### • Order Produk
    ![activityDiagramOrderProduk](https://user-images.githubusercontent.com/55394766/121841767-34d97b80-cd09-11eb-8c7d-c9338cf6a634.jpeg)
    
    ### Class Diagram
@@ -143,18 +143,18 @@
 
 ## Testing
    ### Positive Cases
-   | No  | Scenario                                      | Steps                                         | Hasil yang diharapkan    | Hasil yang didapat       |
-   | --- |:---------------------------------------------:| :-------------------------------------------: | :----------------------: | :----------------------: |
-   | 1   | User login dengan akun yang sudah didaftarkan | User mengakses Argirental lalu ke menu masuk  | Login akun berhasil      | Login akun berhasil      |
-   | 2   | User mendaftar akun sampai berhasil           | User mengakses Agrirental lalu ke menu daftar | Daftar akun berhasil     | Daftar akun berhasil     |
-   | 3   | Mitra/penyewa menambah barang sampai berhasil | Blablablablablablablablablalbalbalbalblablala | Menambah barang berhasil | Menambah barang berhasil |
+   | No  | Scenario                                      | Steps                                                                    | Hasil yang diharapkan    | Hasil yang didapat       |
+   | --- |:---------------------------------------------:| :-----------------------------------------------------------------: | :----------------------: | :----------------------: |
+   | 1   | User login dengan akun yang sudah didaftarkan | User mengakses Argirental lalu ke menu masuk dengan input yg benar  | Login akun berhasil      | Login akun berhasil      |
+   | 2   | User mendaftar akun sampai berhasil           | User mengakses Agrirental lalu ke menu daftar dengan input yg benar | Daftar akun berhasil     | Daftar akun berhasil     |
+   | 3   | Mitra/penyewa menambah barang sampai berhasil | User mengakses menu tambah produk dengan input yg benar             | Menambah barang berhasil | Menambah barang berhasil |
    
    ### Negative Cases (jika ada)
-   | No  | Scenario                                      | Steps                                         | Hasil yang diharapkan    | Hasil yang didapat       |
-   | --- |:---------------------------------------------:| :-------------------------------------------: | :----------------------: | :----------------------: |
-   | 1   | User login dengan akun yang sudah didaftarkan | User mengakses Argirental lalu ke menu masuk  | Login akun gagal         | Login akun gagal         |
-   | 2   | User mendaftar akun sampai berhasil           | User mengakses Agrirental lalu ke menu daftar | Daftar akun gagal        | Daftar akun gagal        |  
-   | 3   | Mitra/penyewa menambah barang sampai berhasil | Blablablablablablablablablalbalbalbalblablala | Menambah barang gagal    | Menambah barang gagal    |
+   | No  | Scenario                                      | Steps                                                               | Hasil yang diharapkan    | Hasil yang didapat       |
+   | --- |:---------------------------------------------:| :-----------------------------------------------------------------: | :----------------------: | :----------------------: |
+   | 1   | User login dengan akun yang sudah didaftarkan | User mengakses Argirental lalu ke menu masuk dengan input yg salah  | Login akun gagal         | Login akun gagal         |
+   | 2   | User mendaftar akun sampai berhasil           | User mengakses Agrirental lalu ke menu daftar dengan input yg salah | Daftar akun gagal        | Daftar akun gagal        |  
+   | 3   | Mitra/penyewa menambah barang sampai berhasil | User mengakses menu tambah produk dengan input yg salah             | Menambah barang gagal    | Menambah barang gagal    |
    
 ## Saran
 
