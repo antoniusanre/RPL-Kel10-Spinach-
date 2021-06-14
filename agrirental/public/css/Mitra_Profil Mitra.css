@@ -1,7 +1,7 @@
 * {
 	padding: 0;
 	margin: 0;
-	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	font-family: Lato;
 	background-color: #262833;
 	color: white;
 	text-decoration: none;
@@ -98,7 +98,7 @@ hr.kotak {
 	position: relative;
 	float: right;
 	width: 79%;
-	height: 370px;
+	height: 395px;
 	right: 30px;
 	top: 150px;
 	background: #3C3E4A;
@@ -197,7 +197,7 @@ input[type=text], input[type=tel], input[type=email] {
 form {
 	background: none;
 }
-button {
+.button1 {
 	position: absolute;
 	width: 100px;
 	height: 35px;
@@ -209,7 +209,23 @@ button {
 	border-radius: 25px;
 	font-size: 15px;
 }
-button:hover {
+.button1:hover {
+	opacity: 0.7;
+	transition: .3s;
+}
+.button2 {
+	position: absolute;
+	width: 100px;
+	height: 35px;
+	left: 50%;
+	top: 100px;
+	background: #800000;
+	border: none;
+	cursor: pointer;
+	border-radius: 25px;
+	font-size: 15px;
+}
+.button2:hover {
 	opacity: 0.7;
 	transition: .3s;
 }
