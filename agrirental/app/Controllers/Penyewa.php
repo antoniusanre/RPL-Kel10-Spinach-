@@ -497,16 +497,13 @@ class Penyewa extends BaseController
         }
 
         $input = $this->request->getVar();
-        $idprod = $input['id_order'];
-        $produk = $this->produkModel->getProduk($idprod);
-        $rental = $this->rentalModel->getRental($produk['id_rental']);
+        $idorder = $input['id_order'];
 
         // kirim data ke order
         $data = [
             'title' => 'Orderan ' . session()->nama_p,
             'penyewa' => $this->penyewaModel->getPenyewa(session()->id),
-            'order' => $produk,
-            'rental' => $rental,
+            'order' => $this->orderModel->getCompleteOrder($idorder),
         ];
         return view('penyewa/orderDetail', $data);
     }

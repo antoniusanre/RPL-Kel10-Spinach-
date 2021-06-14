@@ -71,10 +71,7 @@
             <a class="alamat">Alamat</a>
             <a class="namalengkap"><?= $order['nama_p']; ?></a>
             <a class="notelp"><?= $order['telepon_p']; ?></a>
-            <a class="detail"><?= $order['alamat_p']; ?></a>
-            <a class="kotakab"><?= $order['kota_p']; ?></a>
-            <a class="provinsi"><?= $order['provinsi_p']; ?></a>
-            <a class="kodepos"><?= $order['kodepos_p']; ?></a>
+            <a class="detail"><?= $order['titik_temu']; ?></a>
         </div>
     </div>
     <div class="baris3">

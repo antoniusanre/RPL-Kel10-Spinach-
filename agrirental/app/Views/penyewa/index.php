@@ -17,7 +17,7 @@
 
 <section class="products">
     <?php foreach ($produk as $p) : ?>
-        <a href="/penyewa/detail/<?= $p['id_produk']; ?>">
+        <a style="text-decoration: none;" href="/penyewa/detail/<?= $p['id_produk']; ?>">
             <div class="product-card">
                 <div class="product-image" id="card">
                     <img src="/img/<?= $p['pict_prod']; ?>">

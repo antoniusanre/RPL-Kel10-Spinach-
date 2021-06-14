@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/css/Orderan Saya.css" rel="stylesheet" />
     <script src="https://kit.fontawesome.com/eaa6d1f26f.js" crossorigin="anonymous"></script>
     <title><?= $title; ?></title>
@@ -21,47 +22,48 @@
             <li><a href="/logout"><i class="fas fa-sign-out-alt"></i></a></li>
         </ul>
     </div>
-    <a class="orderansaya">Orderan Saya</a>
-    <?php if (!$order) : ?>
-        <div class="gakade">
-            <a class="takdeprod">Belum ada orderan</a>
+    <div class="container">
+        <div class="title">
+            <p>Orderan Saya</p>
         </div>
-    <?php else : ?>
-        <?php foreach ($order as $o) : ?>
-            <div class="kotak">
-
-                <div class="minusnilai">
-                    <div class="order1">
-                        <a class="orderansaya">Orderan Saya</a>
-                        <hr class="kotak">
-                        <i class="fas fa-user-circle fa-2x" style="position: absolute; left: 15.9%; background: none; top: 210px;"></i>
-                        <a class="namatoko"><?= $o['nama_r']; ?></a>
-                        <a class="status"><?= $o['status']; ?></a>
-                        <hr class="garis">
-                        <img src="/img/<?= $o['pict_prod']; ?>" style="width: 78px; height: 78px; margin-left: 15.9%; margin-top: -174px; position: absolute;">
-                        <a class="judul"><?= $o['judul']; ?></a>
-                        <a class="merek-jenis"><?= $o['merk']; ?> - <?= $o['jenis']; ?></a>
-                        <a class="harga">Rp <?= $o['harga']; ?></a>
-                        <hr class="garis2">
-                        <form method="post" action="/penyewa/nilai">
-                            <input name="id_order" type="hidden" value="<?= $o['id_order']; ?>">
-                            <button type="submit" class="button2">Nilai</button>
-                        </form>
-
+        <div class="content">
+            <?php foreach ($order as $o) : ?>
+                <div class="order" id="card">
+                    <div class="first">
+                        <div class="user">
+                            <img src="/img/<?= $o['pict_rent']; ?>" alt="Profile Picture" width="60.47px" id="profile1">
+                            <p><?= $o['nama_r']; ?></p>
+                        </div>
+                        <a href="#">Selesai</a>
                     </div>
-                    <a class="noorder">No. Order: <?= $o['id_order']; ?></a>
-                    <form method="post" action="/penyewa/orderDetail">
-                        <input name="id_order" type="hidden" value="<?= $o['id_order']; ?>">
-                        <button type="submit" class="button1">Rincian Order</button>
-                    </form>
+                    <br>
+                    <div class="carItem">
+                        <div class="user1">
+                            <img src="/img/<?= $o['pict_prod']; ?>" alt="Mobil" width="100px" id="item">
+                            <p><?= $o['judul']; ?> <br> <?= $o['merk']; ?> <?= $o['jenis']; ?></p>
+                        </div>
+                        <div class="tagihan">
+                            <p>Rp <?= $o['biaya']; ?></p>
+                        </div>
+                    </div>
+                    <?php if ($o['status'] == "Selesai") : ?>
+                        <div class="btn">
+                            <form action="/penyewa/nilai" action="post">
+                                <input type="hidden" name="id_order" value="<?= $o['id_order']; ?>">
+                                <button type="submit"><span></span>Nilai</button>
+                            </form>
+                        </div>
+                    <?php endif; ?>
                 </div>
-            </div>
-
-        <?php endforeach; ?>
-    <?php endif; ?>
-    <footer>
-        <p>Copyright Spinach Team</p>
-    </footer>
+            <?php endforeach; ?>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
 </body>
+<footer>
+    <p>Copyright Spinach Team</p>
+</footer>
 
 </html>
