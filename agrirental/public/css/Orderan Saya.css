@@ -138,8 +138,22 @@
     border-radius: 5px;
 }
 
+.bottom {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    background-color: #394867;
+}
+
+.nomor p {
+    background-color: #394867;
+}
+
 .btn {
     background-color: #394867;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
 }
 
 button {
@@ -147,12 +161,17 @@ button {
     background: #3C3E4A;
     border: 2px solid #4acfac;
     border-radius: 35px;
-    padding: 15px 0;
+    padding: 10px 0;
     font-size: 18px;
     cursor: pointer;
-    margin: 12px 0; 
     overflow: hidden;
     position: relative;
+    margin: 10px;
+}
+
+.tombol {
+    margin: 5px;
+    background-color: #394867;
 }
 
 footer {
