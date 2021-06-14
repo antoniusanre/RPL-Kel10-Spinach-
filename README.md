@@ -3,11 +3,12 @@
   • Kelompok 10
   
 ## Asisten Pratikum
-   • Levina Siatono - G64180019
-   
-   • Ali Naufal Amrullah - G64180080  
-   
-   • Muhammad Fauzan Ramadhan - G64180117
+
+| Nama                    | NIM       |
+| ------------------------|:---------:|
+| Levina Siatono          | G64180019 |
+| Ali Naufal Amrullah     | G64180080 |
+| Muhammad Fauzan Ramadhan| G64180117 |
    
 ## Anggota Kelompok
    • Ahmad Hadryan Mora - G64190001        : Backend Developer
