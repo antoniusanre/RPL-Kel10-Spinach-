@@ -1,0 +1,422 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #262833;
+    color: white;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+.navbar {
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 100px;
+    cursor: pointer;
+}
+
+.navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.navbar ul li::after {
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #4acfac;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: 0.5s;
+}
+
+.navbar ul li:hover::after {
+    width: 100%;
+}
+#profile1 {
+  border-radius: 50%;
+  width: 20px;
+}
+hr.kotak {
+    position: relative;
+    width: 72.5%;
+    height: 153px;
+    margin-left: 13.7%;
+    margin-top: 77px;
+    background: #3C3E4A;
+    border: none;
+}
+a.ap {
+    position: absolute;
+    left: 15.9%;
+    top: 267px;
+    font-size: 20px;
+    background: none;
+}
+a.nl {
+    position: absolute;
+    width: 20%;
+    left: 15.9%;
+    top: 322px;
+    font-size: 17px;
+    background: none;
+    font-weight: bold;
+}
+a.nt {
+    position: absolute;
+    width: 20%;
+    left: 15.9%;
+    top: 352px;
+    font-size: 17px;
+    background: none;
+    font-weight: bold;
+}
+a.al {
+    position: absolute;
+    width: 47%;
+    left: 37%;
+    top: 322px;
+    font-size: 17px;
+    background: none;
+}
+hr.garis {
+    position: relative;
+    width: 70%;
+    left: 15%;
+    top: -98px;
+    border: 1px solid #262833;
+}
+hr.kotak2 {
+    position: absolute;
+    width: 72.5%;
+    height: 175px;
+    left: 13.7%;
+    top: 417px;
+    background: #3C3E4A;
+    border: none;
+}
+a.jr {
+    position: absolute;
+    left: 15.9%;
+    top: 447px;
+    font-size: 20px;
+    background: none;
+}
+.col-2 {
+    position: absolute;
+    float: left;
+    margin-left: 34%;
+    width: 30%;
+    margin-top: 35px;
+    background: none;
+}
+select, input[type=datetime-local], textarea {
+    background: none;
+    width: 95%;
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 5px;
+    resize: vertical;
+}
+.garis2 {
+    position: relative;
+    width: 0px;
+    height: 70px;
+    left: 30%;
+    top: 20px;
+    border: 1px solid #262833;
+}
+hr.garis3 {
+    position: relative;
+    width: 70%;
+    left: 15%;
+    top: 28px;
+    border: 1px solid #262833;
+}
+a.tb {
+    position: absolute;
+    left: 15.9%;
+    top: 535px;
+    font-size: 20px;
+    background: none;
+}
+input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  opacity: 0.6;
+  filter: invert(0.8);
+}
+input[type="datetime-local"]::-webkit-calendar-picker-indicator:hover {
+  opacity: 1
+}
+.col-3 {
+    position: absolute;
+    float: left;
+    margin-left: 34%;
+    width: 20%;
+    margin-top: 53px;
+    background: none;
+}
+a.sampai {
+    position: absolute;
+    left: 48%;
+    top: 532px;
+    font-size: 30px;
+    background: none;
+    font-weight: bold;
+}
+.col-4 {
+    position: absolute;
+    float: left;
+    margin-left: 60%;
+    width: 20%;
+    margin-top: 53px;
+    background: none;
+}
+.garis4 {
+    position: relative;
+    width: 0px;
+    height: 70px;
+    left: 30%;
+    top: 37px;
+    border: 1px solid #262833;
+}
+hr.kotak3 {
+    position: absolute;
+    width: 72.5%;
+    height: 335px;
+    left: 13.7%;
+    top: 606px;
+    background: #3C3E4A;
+    border: none;
+}
+a.namatoko {
+    position: absolute;
+    width: 27.5%;
+    left: 19%;
+    top: 633px;
+    background: none;
+}
+a.judul {
+    position: absolute;
+    width: 23.5%;
+    left: 23%;
+    top: 677px;
+    background: none;
+}
+a.merek-jenis {
+    position: absolute;
+    width: 23.5%;
+    left: 23%;
+    top: 707px;
+    background: none;
+}
+a.harga12jam {
+    position: absolute;
+    left: 48%;
+    top: 633px;
+    background: none;
+}
+a.hargaprod {
+    position: absolute;
+    width: 11%;
+    left: 48%;
+    top: 677px;
+    background: none;
+}
+a.jumlahjam {
+    position: absolute;
+    left:61%;
+    top: 633px;
+    background: none;
+}
+a.jumlah {
+    position: absolute;
+    width: 7%;
+    left:61%;
+    top: 677px;
+    background: none;
+}
+a.harga {
+    position: absolute;
+    left: 71%;
+    top: 633px;
+    background: none;
+}
+a.hartot {
+    position: absolute;
+    width: 13.5%;
+    left: 71%;
+    top: 677px;
+    background: none;
+}
+hr.garis5 {
+    position: relative;
+    width: 70%;
+    left: 15%;
+    top: 225px;
+    border: 1px solid #262833;
+}
+label {
+    position: absolute;
+    left: 15.9%;
+    top: 797px;
+    background: none;
+}
+.col-5 {
+    position: absolute;
+    float: left;
+    margin-left: 19%;
+    width: 30%;
+    margin-top: 25px;
+    background: none;
+}
+a.total {
+    position: absolute;
+    left: 59%;
+    top: 796px;
+    background: none;
+    font-size: 18px;
+}
+a.jumlahtotal {
+    position: absolute;
+    width: 13.5%;
+    left: 71%;
+    top: 797px;
+    background: none;
+}
+a.metode {
+    position: absolute;
+    left: 57.3%;
+    top: 831px;
+    background: none;
+    font-size: 18px;
+}
+.button1 {
+    position: absolute;
+    width: 140px;
+    height: 35px;
+    left: 59%;
+    top: 882px;
+    background: #800000;
+    border: none;
+    cursor: pointer;
+    border-radius: 25px;
+    font-size: 15px;
+}
+.button1:hover {
+    opacity: 0.7;
+    transition: .3s;
+}
+a.cod {
+    position: absolute;
+    width: 13.5%;
+    left: 71%;
+    top: 832px;
+    background: none;
+}
+hr.kotak4 {
+    position: relative;
+    width: 72.5%;
+    height: 47px;
+    margin-left: 13.7%;
+    margin-top: -360px;
+    background: #3C3E4A;
+    border: none;
+}
+a.stat {
+    position: absolute;
+    margin-left: 15.9%;
+    margin-top: -35px;
+    font-size: 18px;
+    font-weight: bold;
+    background: none;
+}
+.garis6 {
+    position: relative;
+    width: 0px;
+    height: 30px;
+    left: 22%;
+    top: -38px;
+    border: 1px solid #262833;
+}
+a.status {
+    position: absolute;
+    margin-left: 24.5%;
+    margin-top: -63px;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #4ACFAC;
+    background: none;
+}
+select {
+    position: absolute;
+    background: none;
+    width: 8%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    resize: vertical;
+    left: 23.5%;
+    top: 192px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.button2 {
+    position: absolute;
+    width: 140px;
+    height: 35px;
+    left: 71%;
+    top: 882px;
+    background: #4ACFAC;
+    border: none;
+    cursor: pointer;
+    border-radius: 25px;
+    font-size: 15px;
+}
+.button2:hover {
+    opacity: 0.7;
+    transition: .3s;
+}
+a.tgldari {
+    position: absolute;
+    left: 34%;
+    top: 540px;
+    background: none;
+}
+a.tglsampai {
+    position: absolute;
+    left: 52%;
+    top: 540px;
+    background: none;
+}
+a.pesantext {
+    position: absolute;
+    left: 20.5%;
+    top: 797px;
+    background: none;
+}
+footer {
+    position: fixed;
+    margin: 5px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+}
