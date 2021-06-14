@@ -1,5 +1,6 @@
 # Laporan Akhir Projek
-## Hai
+## Kelas RPL :
+• Paralel 2
 
 • Kelas RPL :
 
