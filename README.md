@@ -80,6 +80,7 @@
    • Class Diagram :
    
    • Entity Relationship Diagram :
+   
    ![ERD](https://user-images.githubusercontent.com/78836288/121841140-f4c5c900-cd07-11eb-85be-de424abe9db0.jpeg)
     
    • Arsitektur Sistem : 
@@ -87,6 +88,7 @@
    • Fungsi Utama yang Dikembangkan :
     
    • Fungsi CRUD :
+   
    ![CRUD_1](https://user-images.githubusercontent.com/55394766/121839240-d78efb80-cd03-11eb-8fe3-196ea152273d.png)
    
    ![CRUD_2](https://user-images.githubusercontent.com/55394766/121839248-d958bf00-cd03-11eb-9cda-a3d73d067c0d.png)
