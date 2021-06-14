@@ -1,11 +1,10 @@
 # Laporan Akhir Projek Mata Kuliah Rekayasa Perangkat Lunak (KOM331
   • Kelas RPL Paralel 2
   • Kelompok 10
-
-• Asisten Pratikum :
-    • Levina Siatono - G64180019
-    • Ali Naufal Amrullah - G64180080    
-    • Muhammad Fauzan Ramadhan - G64180117
+## Asisten Pratikum :
+   • Levina Siatono - G64180019
+   • Ali Naufal Amrullah - G64180080    
+   • Muhammad Fauzan Ramadhan - G64180117
 
 • Anggota Kelompok :
 
