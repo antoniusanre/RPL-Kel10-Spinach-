@@ -46,6 +46,11 @@
   width: 100%;
 }
 
+#profile1 {
+  border-radius: 50%;
+  width: 20px;
+}
+
 .container {
   display: flex;
   justify-content: center;

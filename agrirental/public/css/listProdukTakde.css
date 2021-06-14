@@ -89,6 +89,11 @@
     width: 100%;
 }
 
+#profile1 {
+    border-radius: 50%;
+    width: 20px;
+}
+
 footer {
     position: fixed;
     left: 0;
