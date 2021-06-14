@@ -734,7 +734,7 @@ class Rental extends BaseController
         // terima inputan perintah
         $input = $this->request->getVar();
         $idorder = $input['id_order'];
-        $statusl = $input['statusl'];
+        // $statusl = $input['statusl'];
         $status = $input['status'];
 
         // kalau batal

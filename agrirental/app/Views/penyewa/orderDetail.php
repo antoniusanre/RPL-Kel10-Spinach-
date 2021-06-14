@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="Rincian Order.css" rel="stylesheet" />
+    <link href="/css/Rincian Order.css" rel="stylesheet" />
     <script src="https://kit.fontawesome.com/eaa6d1f26f.js" crossorigin="anonymous"></script>
     <title><?= $title; ?></title>
 </head>
@@ -23,7 +23,7 @@
     </div>
     <div class="alamat pengguna">
         <hr class="kotak">
-        <a class="ap">Alamat Pengguna</a>
+        <a class="ap">Alamat Order</a>
         <a class="nl"><?= $penyewa['nama_p']; ?></a>
         <a class="nt"><?= $penyewa['telepon_p']; ?></a>
         <a class="al"><?= $order['titik_temu']; ?></a>
@@ -46,7 +46,7 @@
         <div class="z1">
             <i class="fas fa-user-circle fa-2x" style="position: absolute; left: 15.9%; background: none; top: 627px;"></i>
             <a class="namatoko"><?= $order['nama_r']; ?></a>
-            <img src="jazz.png" style="width: 78px; height: 78px; margin-left: 15.9%; margin-top: 130px; position: absolute;">
+            <img src="/img/<?= $order['pict_prod']; ?>" style="width: 78px; height: 78px; margin-left: 15.9%; margin-top: 130px; position: absolute;">
             <a class="judul"><?= $order['judul']; ?></a>
             <a class="merek-jenis"><?= $order['merk']; ?> - <?= $order['jenis']; ?></a>
         </div>
@@ -71,34 +71,49 @@
         <a class="pesantext"><?= $order['note']; ?></a>
 
     </div>
-    <a href="">
-        <button class="button1">Batalkan Orderan</button>
-    </a>
+    <?php if ($order['status'] == 'Konfirmasi1') : ?>
+        <form action="/penyewa/orderUpdate" method="post">
+            <input type="hidden" name="status" value="Batal">
+            <input type="hidden" name="id_order" value="<?= $order['id_order']; ?>">
+            <button type="submit" class="button1">Batalkan Orderan</button>
+        </form>
+    <?php elseif ($order['status'] == 'Menunggu') : ?>
+        <form action="/penyewa/orderUpdate" method="post">
+            <input type="hidden" name="status" value="Batal">
+            <input type="hidden" name="id_order" value="<?= $order['id_order']; ?>">
+            <button type="submit" class="button1">Batalkan Orderan</button>
+        </form>
+    <?php elseif ($order['status'] == 'Berlangsung') :  ?>
+
+    <?php elseif ($order['status'] == "Konfirmasi2") : ?>
+
+    <?php endif; ?>
+
 
     <hr class="kotak4">
     <a class="stat">Status</a>
     <div class="garis6"></div>
-    <div class="pilih">
-        <a class="status">selesai</a>
-        <form action="/penyewa/orderUpdate" method="post"></form>
-        <input type="hidden" name="id_order" value="<?= $order['id_order']; ?>">
-        <select name="status" id="">
-            <?php if ($order['status'] == 'Konfirmasi1') : ?>
-                <option value="" disabled selected></option>
-                <option value="Batal">Batal</option>
-            <?php elseif ($order['status'] == 'Menunggu') : ?>
-                <option value="" disabled selected></option>
-                <option value="Berlangsung">Lanjut</option>
-                <option value="Batal">Batal</option>
-            <?php elseif ($order['status'] == 'Berlangsung') :  ?>
-                <option value="" disabled selected></option>
-                <option value="Konfirmasi2">Lanjut</option>
-            <?php elseif ($order['status'] == "Konfirmasi2") : ?>
-                <option value="" disabled selected></option>
-            <?php endif; ?>
-        </select>
-    </div>
-    <button type="submit" class="button2">Update Status</button>
+
+    <a class="status"><?= $order['status']; ?></a>
+    <?php if ($order['status'] == 'Konfirmasi1') : ?>
+
+    <?php elseif ($order['status'] == 'Menunggu') : ?>
+        <form action="/penyewa/orderUpdate" method="post">
+            <input type="hidden" name="id_order" value="<?= $order['id_order']; ?>">
+            <input type="hidden" name="status" value="Berlangsung">
+            <button type="submit" class="button2">Update Status</button>
+        </form>
+    <?php elseif ($order['status'] == 'Berlangsung') :  ?>
+        <form action="/penyewa/orderUpdate" method="post">
+            <input type="hidden" name="id_order" value="<?= $order['id_order']; ?>">
+            <input type="hidden" name="status" value="Konfirmasi2">
+            <button type="submit" class="button2">Update Status</button>
+        </form>
+    <?php elseif ($order['status'] == "Konfirmasi2") : ?>
+
+    <?php endif; ?>
+
+
     <footer>
         <p>Copyright Spinach Team</p>
     </footer>

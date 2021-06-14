@@ -34,7 +34,7 @@
                             <img src="/img/<?= $o['pict_rent']; ?>" alt="Profile Picture" width="60.47px" id="profile1">
                             <p><?= $o['nama_r']; ?></p>
                         </div>
-                        <a href="#">Selesai</a>
+                        <a href="#"><?= $o['status']; ?></a>
                     </div>
                     <br>
                     <div class="carItem">
@@ -46,14 +46,27 @@
                             <p>Rp <?= $o['biaya']; ?></p>
                         </div>
                     </div>
-                    <?php if ($o['status'] == "Selesai") : ?>
-                        <div class="btn">
-                            <form action="/penyewa/nilai" action="post">
-                                <input type="hidden" name="id_order" value="<?= $o['id_order']; ?>">
-                                <button type="submit"><span></span>Nilai</button>
-                            </form>
+                    <div class="bottom">
+                        <div class="nomor">
+                            <p>No.Order : <?= $o['id_order']; ?></p>
                         </div>
-                    <?php endif; ?>
+                        <div class="btn">
+                            <?php if ($o['status'] == "Selesai") : ?>
+                                <div class="tombol">
+                                    <form action="/penyewa/nilai" method="post">
+                                        <input type="hidden" name="id_order" value="<?= $o['id_order']; ?>">
+                                        <button type="submit"><span></span>Nilai</button>
+                                    </form>
+                                </div>
+                            <?php endif; ?>
+                            <div class="tombol">
+                                <form action="/penyewa/orderDetail" method="post">
+                                    <input type="hidden" name="id_order" value="<?= $o['id_order']; ?>">
+                                    <button type="submit"><span></span>Rincian</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             <?php endforeach; ?>
         </div>

@@ -503,8 +503,9 @@ class Penyewa extends BaseController
         $data = [
             'title' => 'Orderan ' . session()->nama_p,
             'penyewa' => $this->penyewaModel->getPenyewa(session()->id),
-            'order' => $this->orderModel->getCompleteOrder($idorder),
+            'order' => $this->orderModel->getCompleteOrder4($idorder),
         ];
+
         return view('penyewa/orderDetail', $data);
     }
 
@@ -514,7 +515,7 @@ class Penyewa extends BaseController
         // terima inputan perintah
         $input = $this->request->getVar();
         $idorder = $input['id_order'];
-        $statusl = $input['statusl'];
+        // $statusl = $input['statusl'];
         $status = $input['status'];
 
         // kalau batal
@@ -528,8 +529,8 @@ class Penyewa extends BaseController
         }
 
         // update status berlangsung ke konfirmasi
-        if ($status == "Konfirmasi 2") {
-            $this->orderModel->update($idorder, ['status' => 'Konfirmasi 2']);
+        if ($status == "Konfirmasi2") {
+            $this->orderModel->update($idorder, ['status' => 'Konfirmasi2']);
         }
 
         // balikin ke halaman order

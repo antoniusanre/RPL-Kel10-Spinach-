@@ -71,4 +71,15 @@ class OrderModel extends Model
         $query = $builder->get()->getResultArray();
         return $query[0];
     }
+    public function getCompleteOrder4($id)
+    {
+
+        $builder = $this->db->table('orderan');
+        $builder->select('*');
+        $builder->join('produk', 'orderan.o_produk = produk.id_produk');
+        $builder->join('rental', 'orderan.o_rental = rental.id_rental');
+        $builder->where(['id_order' => $id]);
+        $query = $builder->get()->getResultArray();
+        return $query[0];
+    }
 }
