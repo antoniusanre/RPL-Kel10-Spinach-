@@ -157,6 +157,6 @@
    | 3   | Mitra/penyewa menambah barang sampai berhasil | User mengakses menu tambah produk dengan input yg salah             | Menambah barang gagal    | Menambah barang gagal    |
    
 ## Saran
-
-## Penutup
-    
+   1. Agrirental diharapkan dapat merambah ke platform lain seperti android dan iOS
+   2. Memperbaiki desain Agrirental yang sudah ada agar responsive sehingga mencakup lebih banyak perangkat
+   3. Karena Agrirental memakai tema gelap, diharapkan dapat juga dibuat tema terang agar dapat menyesuaikan dengan kemauan pengguna
