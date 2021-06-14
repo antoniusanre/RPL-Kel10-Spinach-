@@ -118,7 +118,7 @@
    
    ### Entity Relationship Diagram
    
-   ![ERD](https://user-images.githubusercontent.com/78836288/121841140-f4c5c900-cd07-11eb-85be-de424abe9db0.jpeg)
+   ![ERD_2](https://user-images.githubusercontent.com/55394766/121966663-394d7500-cd99-11eb-9360-02a6b683caeb.jpeg)
     
    ### Arsitektur Sistem 
     
