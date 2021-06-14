@@ -57,9 +57,9 @@
    
    • Browser     : Chrome & Edge
    
-   • Hosting     :
+   • Hosting     : InfinityFree
    
-   • Database    :
+   • Database    : MySQL
         
    ### Bahasa dan Framework
    • Frontend  : HTML, CSS, Javascript
