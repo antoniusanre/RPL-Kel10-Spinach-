@@ -87,10 +87,9 @@
    • Fungsi Utama yang Dikembangkan :
     
    • Fungsi CRUD :
+   ![CRUD_1](https://user-images.githubusercontent.com/55394766/121839240-d78efb80-cd03-11eb-8fe3-196ea152273d.png)
    
-      • https://github.com/antoniusanre/RPL-Kel10-Spinach-/issues/4#issue-919987019
-      
-      • https://github.com/antoniusanre/RPL-Kel10-Spinach-/blob/505a46183ec1de100f81a47b07da108c018f4b14/asset/img/CRUD_2.png
+   ![CRUD_2](https://user-images.githubusercontent.com/55394766/121839248-d958bf00-cd03-11eb-9cda-a3d73d067c0d.png)
 
 ## Hasil Implementasi 
    • Screenshot Sistem
