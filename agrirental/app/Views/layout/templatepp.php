@@ -16,7 +16,7 @@
             <ul>
                 <li><a href="/rental">MITRA</a></li>
                 <li><a href="#">TENTANG</a></li>
-                <li><a href="/daftar"><img src="Profile.png" alt="Profile Picture" width="60.47px"> username</a></li>
+                <li><a href="/daftar"><img src="/img/<?= $penyewa['pict_p']; ?>" alt="Profile Picture" width="60.47px"> username</a></li>
             </ul>
         </div>
     </div>

@@ -1,11 +1,11 @@
 * {
-	padding: 0;
-	margin: 0;
-	font-family: Lato;
-	background-color: #262833;
-	color: white;
-	text-decoration: none;
-	box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: Lato;
+    background-color: #262833;
+    color: white;
+    text-decoration: none;
+    box-sizing: border-box;
 }
 
 .navbar {
@@ -196,7 +196,7 @@ a.sampai {
 hr.kotak3 {
     position: absolute;
     width: 72.5%;
-    height: 263px;
+    height: 335px;
     left: 13.7%;
     top: 539px;
     background: #3C3E4A;
@@ -285,9 +285,10 @@ label {
 }
 a.total {
     position: absolute;
-    left: 60%;
-    top: 730px;
+    left: 59%;
+    top: 729px;
     background: none;
+    font-size: 18px;
 }
 a.jumlahtotal {
     position: absolute;
@@ -296,62 +297,19 @@ a.jumlahtotal {
     top: 730px;
     background: none;
 }
-hr.kotak4 {
-    position: absolute;
-    width: 72.5%;
-    height: 330px;
-    left: 13.7%;
-    top: 817px;
-    background: #3C3E4A;
-    border: none;
-}
 a.metode {
     position: absolute;
-    left: 15.9%;
-    top: 890px;
-    font-size: 20px;
+    left: 57.3%;
+    top: 764px;
     background: none;
-}
-.garis6 {
-    position: relative;
-    width: 0px;
-    height: 152px;
-    left: 32%;
-    top: 350px;
-    border: 1px solid #262833;
-}
-hr.garis7 {
-    position: relative;
-    width: 70%;
-    left: 15%;
-    top: 360px;
-    border: 1px solid #262833;
-}
-a.totalp {
-    position: absolute;
-    left: 58%;
-    top: 1020px;
-    background: none;
-}
-a.jumlahtotalp {
-    position: absolute;
-    left: 71%;
-    top: 1020px;
-    background: none;
-}
-hr.garis8 {
-    position: relative;
-    width: 70%;
-    left: 15%;
-    top: 427px;
-    border: 1px solid #262833;
+    font-size: 18px;
 }
 button {
     position: absolute;
     width: 130px;
     height: 35px;
-    left: 67%;
-    top: 1090px;
+    left: 71%;
+    top: 815px;
     background: #4ACFAC;
     border: none;
     cursor: pointer;
@@ -362,11 +320,10 @@ button:hover {
     opacity: 0.7;
     transition: .3s;
 }
-footer {
-    margin-top: 550px;
-    font-size: 15px;
-    padding: 20px;
-    color: #F1F6F9;
+a.cod {
+    position: absolute;
+    width: 13.5%;
+    left: 71%;
+    top: 765px;
     background: none;
-    text-align: center;
 }

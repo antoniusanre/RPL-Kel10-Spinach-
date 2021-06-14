@@ -26,7 +26,16 @@ class ProdukModel extends Model
         return $this->db->table('produk')->join('rental', 'produk.id_rental=rental.id_rental')->get()->getResultArray();
     }
 
-    public function cari($k1 = false, $k2 = false)
+    public function cari($key = false)
     {
+        if ($key == false) {
+            return $this->getProdukRental();
+        }
+
+        $data = $this->db->query("SELECT * FROM produk, rental WHERE produk.id_rental = rental.id_rental AND (produk.judul LIKE '%$key%' OR rental.kecamatan_r LIKE '%$key%' OR rental.kota_r LIKE '%$key%' OR rental.provinsi_r LIKE '%$key%' OR rental.alamat_r LIKE '%$key%' OR rental.nama_r LIKE '%$key%')");
+
+        $prod = $data->getResultArray();
+
+        return $prod;
     }
 }

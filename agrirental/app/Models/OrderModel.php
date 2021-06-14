@@ -10,7 +10,7 @@ class OrderModel extends Model
     protected $primaryKey = 'id_order';
 
     protected $useTimestamps = true;
-    protected $allowedFields = ['id_order', 'o_produk', 'o_penyewa', 'o_rental', 'waktu_sewa', 'biaya', 'status', 'start_date', 'end_date', 'note', 'titik_temu'];
+    protected $allowedFields = ['id_order', 'o_produk', 'o_penyewa', 'o_rental', 'waktu_sewa', 'biaya', 'status', 'start_date', 'end_date', 'note', 'titik_temu', 'jenis_rental'];
 
     public function getOrder($id = false)
     {

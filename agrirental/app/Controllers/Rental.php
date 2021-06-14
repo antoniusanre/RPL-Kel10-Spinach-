@@ -34,6 +34,9 @@ class Rental extends BaseController
     // halaman utama rental
     public function index()
     {
+        if (!session()->id) {
+            return redirect()->to('/login');
+        }
         if (!$this->rental) {
 
             return redirect()->to('/rental/daftar');

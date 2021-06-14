@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="/css/Nilai Produk.css" rel="stylesheet" />
+    <link href="./Nilai Produk.css" rel="stylesheet" />
     <script src="https://kit.fontawesome.com/eaa6d1f26f.js" crossorigin="anonymous"></script>
     <title>Nilai Produk</title>
 </head>
@@ -12,7 +12,7 @@
 <body>
     <div class="landing">
         <div class="navbar">
-            <a href="landingpage.html"><img src="/img/logo.png" class="logo"></a>
+            <a href="landingpage.html"><img src="logo.png" class="logo"></a>
             <ul>
                 <li><a href="#">MITRA</a></li>
                 <li><a href="#">TENTANG</a></li>

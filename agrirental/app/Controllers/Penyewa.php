@@ -2,6 +2,8 @@
 
 namespace App\Controllers;
 
+use App\Models\OrderModel;
+use CodeIgniter\I18n\Time;
 use App\Models\PenyewaModel;
 use App\Models\ProdukModel;
 use App\Models\RentalModel;
@@ -13,11 +15,13 @@ class Penyewa extends BaseController
     protected $penyewaModel;
     protected $produkModel;
     protected $rentalModel;
+    protected $orderModel;
     public function __construct()
     {
         $this->penyewaModel = new PenyewaModel();
         $this->produkModel = new ProdukModel();
         $this->rentalModel = new RentalModel();
+        $this->orderModel = new OrderModel();
     }
 
     public function index()
@@ -329,8 +333,19 @@ class Penyewa extends BaseController
     }
 
     // arahkan ke halaman detail produk
-    public function detail()
+    public function detail($id)
     {
+        $produk = $this->produkModel->getProduk($id);
+        $data = [
+            'title' => 'Detail ' . $produk['judul'],
+            'produk' => $produk,
+            'penyewa' => $this->penyewaModel->getPenyewa(session()->id),
+            'rental' => $this->rentalModel->getRental($produk['id_rental']),
+        ];
+
+
+
+        return view('/penyewa/detail', $data);
     }
 
     // arahkan ke halaman checkout
@@ -352,13 +367,100 @@ class Penyewa extends BaseController
             'penyewa' => $this->penyewaModel->getPenyewa(session()->id),
             'rental' => $rental,
             'produk' => $produk,
+            'validation' => \Config\Services::validation(),
+
         ];
         return view('penyewa/checkout', $data);
+    }
+
+    // handle waktu
+    public function waktu($date)
+    {
+        $separate = explode("T", $date);
+        $separate2 = explode("-", $separate[0]);
+        $separate3 = explode(":", $separate[1]);
+        $year = (int)$separate2[0];
+        $month = (int)$separate2[1];
+        $day = (int)$separate2[2];
+        $hour = (int)$separate3[0];
+        $minute = (int)$separate3[1];
+        $time = Time::create($year, $month, $day, $hour, $minute);
+
+        return $time;
     }
 
     // fungsi untuk membuat orderan
     public function pesan()
     {
+        // ambil data inputan
+        $data = $this->request->getVar();
+        // validasi input
+        if (!$this->validate([
+            'titik_temu' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Titik Temu harus diisi!',
+                ]
+            ],
+            'start_date' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Waktu mulai rental harus diisi!'
+                ]
+            ],
+            'end_date' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Waktu akhir rental harus diisi!'
+                ]
+            ],
+            'jenis_rental' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Jenis Rental harus diisi!'
+                ]
+            ],
+        ])) {
+            $validation = \Config\Services::validation();
+            return redirect()->to('/penyewa/checkout/' . $data['o_produk'])->withInput()->with('validation', $validation);
+        };
+
+        // ambil waktu booking dan ubah ke format php
+        $before = $this->waktu($data['start_date']);
+        $after = $this->waktu($data['end_date']);
+
+        // ambil waktu selisihnya
+        $diff = $before->difference($after);
+        // simpan ke waktu sewa
+        $waktu_sewa = $diff->getHours();
+
+        // ambil data produk
+        $produk = $this->produkModel->getProduk($data['o_produk']);
+        $kelipatan = $waktu_sewa / 12;
+        if ($kelipatan == 0) $waktu_sewa = 1;
+        $biaya = $produk['harga'] * $kelipatan;
+
+        // simpan ke database
+        $this->orderModel->save([
+            'o_produk' => $data['o_produk'],
+            'o_penyewa' => session()->id,
+            'o_rental' => $data['o_rental'],
+            'start_date' => $before,
+            'end_date' => $after,
+            'jenis_rental' => $data['jenis_rental'],
+            'titik_temu' => $data['titik_temu'],
+            'waktu_sewa' => $waktu_sewa,
+            'biaya' => $biaya,
+            'status' => 'konfirmasi1',
+            'note' => $data['note']
+
+        ]);
+
+        // kasih informasi kalau udah berhasil terdaftar
+        session()->setFlashdata('pesans', 'Anda berhasil order!');
+
+        // balikin ke halaman login untuk login
+        return redirect()->to('/penyewa/order');
     }
 
     // arahkan ke halaman history pemesanan
@@ -401,5 +503,18 @@ class Penyewa extends BaseController
     // fungsi update rating
     public function rating()
     {
+    }
+
+    public function cari()
+    {
+        $keyword = $this->request->getVar('keyword');
+        $data = [
+            'title' => 'Cari Produk',
+            'produk' => $this->produkModel->cari($keyword),
+            'penyewa' => $this->penyewaModel->getPenyewa(session()->id),
+
+        ];
+
+        return view('/penyewa/index', $data);
     }
 }

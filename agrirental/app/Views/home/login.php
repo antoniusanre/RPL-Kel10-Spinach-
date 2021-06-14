@@ -8,7 +8,7 @@
     <header>
         <div class="atas">
             <a href="">
-                <img src="img/logo.png" class="logo">
+                <img src="/img/logo.png" class="logo">
             </a>
         </div>
     </header>

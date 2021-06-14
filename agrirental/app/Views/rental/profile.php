@@ -1,44 +1,110 @@
-<?= $this->extend('layout/templater'); ?>
-<?= $this->section('content'); ?>
-<link href="/css/Mitra_Profil Mitra.css" rel="stylesheet" />
+<!DOCTYPE html>
+<html>
 
-<a class="sprofil">Profil Mitra</a>
-<hr class="kotak">
-<div class="mitra">
-    <hr class="kotak2">
-    <i class="fas fa-store-alt fa-3x" style="position: absolute; top: 210px; left: 25%; background: none;"></i>
-    <a class="namatoko">Agrirental</a>
-    <a class="gabung">Waktu bergabung: 32-13-2100</a>
-    <hr class="kotak3">
-    <i class="fas fa-car fa-lg" style="left: 23.65%; top: 298px; position: absolute; background: none;"></i>
-    <a href="">
-        <div class="pproduk">
-            <a class="prod">Produk</a>
-            <a style="position: absolute; top: 294px;
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="./Mitra_Profil Mitra.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/eaa6d1f26f.js" crossorigin="anonymous"></script>
+    <title>Mitra - Profil Mitra</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="atas">
+                <a href="">
+                    <img class="logo" src="Logo.png" />
+                </a>
+                <i class="fas fa-store-alt fa-lg" style="position: fixed; float: right; top: 34px; right: 2.3%;"></i>
+                <a class="sUname">Agrirental</a>
+                <a class="panah">&#10095;</a>
+                <a href="" class="sAkun2">Profil Mitra</a>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li>
+                        <a href="">
+                            <span class="icon"><i class="fas fa-store-alt" style="color: #4ACFAC;"></i></span>
+                            <span class="profil" style="color: #4ACFAC;">Profil Mitra</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <span class="icon"><i class="fas fa-car"></i></span>
+                            <span class="produk">Produk</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <span class="icon"><i class="fas fa-clipboard-list"></i></span>
+                            <span class="orderan">Orderan</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <span class="icon"><i class="fas fa-sign-out-alt"></i></span>
+                            <span class="keluar">Keluar</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <a class="sprofil">Profil Mitra</a>
+    <hr class="kotak">
+    <div class="mitra">
+        <hr class="kotak2">
+        <i class="fas fa-store-alt fa-3x" style="position: absolute; top: 210px; left: 25%; background: none;"></i>
+        <a class="namatoko">Agrirental</a>
+        <a class="gabung">Waktu bergabung: 32-13-2100</a>
+        <hr class="kotak3">
+        <i class="fas fa-car fa-lg" style="left: 23.65%; top: 298px; position: absolute; background: none;"></i>
+        <a href="">
+            <div class="pproduk">
+                <a class="prod">Produk</a>
+                <a style="position: absolute; top: 294px;
           right: 51%; color: #4ACFAC;">&#10095;</a>
-            <a class="jumlahprod">1</a>
-        </div>
-    </a>
-    <hr class="kotak4">
-    <i class="far fa-star fa-lg" style="left: 23.5%; top: 332px; position: absolute; background: none;"></i>
-    <a href="">
-        <div class="penilaian">
-            <a class="nilai">Penilaian Mitra</a>
-            <a style="position: absolute; top: 330px;
+                <a class="jumlahprod">1</a>
+            </div>
+        </a>
+        <hr class="kotak4">
+        <i class="far fa-star fa-lg" style="left: 23.5%; top: 332px; position: absolute; background: none;"></i>
+        <a href="">
+            <div class="penilaian">
+                <a class="nilai">Penilaian Mitra</a>
+                <a style="position: absolute; top: 330px;
           right: 51%; color: #4ACFAC" ;>&#10095;</a>
-            <a class="nilaimitra">5.0(10)</a>
-        </div>
-    </a>
-</div>
-<div class="formform">
-    <form>
-        <label>Nama Mitra</label>
-        <input type="text" id="" name="" value="Agrirental">
-        <div class="tombol">
+                <a class="nilaimitra">5.0(10)</a>
+            </div>
+        </a>
+    </div>
+    <div class="formform">
+        <form>
+            <label>Nama Mitra</label>
+            <input type="text" id="" name="" value="Agrirental">
+            <label>Email</label>
+            <input type="email" id="" name="" value="rafidanisa@apps.ipb.ac.id">
+            <label>Nama CP</label>
+            <input type="text" id="" name="" value="Aku">
+            <label>Nomor CP</label>
+            <input type="tel" id="" name="" value="081234567890">
+            <label>Alamat Rinci</label>
+            <input type="text" id="" name="" value="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" style="width: 79.5%">
+            <label>Kecamatan</label>
+            <input type="text" id="" name="" value="xxxxxxxxxxxxxx">
+            <label>Kota/Kab</label>
+            <input type="text" id="" name="" value="xxxxxx xxxxx">
+            <label>Provinsi</label>
+            <input type="text" id="" name="" value="xxxx xxxxx">
             <a href="">
                 <button>Simpan</button>
             </a>
-        </div>
-    </form>
-</div>
-<?= $this->endSection(); ?>
+        </form>
+    </div>
+    <footer>
+        <p>Copyright Spinach Team</p>
+    </footer>
+</body>
+
+</html>
