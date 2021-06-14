@@ -60,13 +60,13 @@
         • Hosting     :
         • Database    :
         
-    • Tech
+    • Bahasa dan Framework :
+        • Frontend  : HTML, CSS, Javascript
+        • Backend   : PHP, Code Igniter 4
         
     • Lainnya :
         • Version Control & Collaboration Platform  : Github
         • Project Management Tools                  : Trello
-        • Bahasa yang Digunakan                     : HTML, CSS, PHP
-        • Framework                                 : Code Igniter 4
 
 • Hasil dan Pembahasan :
 
