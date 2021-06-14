@@ -54,16 +54,21 @@
         
    ### Spesifikasi Perangkat Lunak :
    • Text Editor : Sublime Text & Visual Studio Code
+   
    • Browser     : Chrome & Edge
+   
    • Hosting     :
+   
    • Database    :
         
    ### Bahasa dan Framework :
    • Frontend  : HTML, CSS, Javascript
+   
    • Backend   : PHP, Code Igniter 4
         
    ### Lainnya :
    • Version Control & Collaboration Platform  : Github
+   
    • Project Management Tools                  : Trello
 
 ## Hasil dan Pembahasan :
@@ -81,20 +86,20 @@
    • Fungsi Utama yang Dikembangkan :
     
    • Fungsi CRUD :
-      https://github.com/antoniusanre/RPL-Kel10-Spinach-/issues/4#issue-919987019
+   
+      • https://github.com/antoniusanre/RPL-Kel10-Spinach-/issues/4#issue-919987019
       
-    • https://github.com/antoniusanre/RPL-Kel10-Spinach-/blob/505a46183ec1de100f81a47b07da108c018f4b14/asset/img/CRUD_2.png
+      • https://github.com/antoniusanre/RPL-Kel10-Spinach-/blob/505a46183ec1de100f81a47b07da108c018f4b14/asset/img/CRUD_2.png
 
-## Hasil Implementasi :
-
+## Hasil Implementasi 
    • Screenshot Sistem
     
    • Link Aplikasi (klo dah deploy)
 
 ## Testing :
-
-    • Positive Cases
-    • Negative Cases (jika ada)
+   • Positive Cases
+   
+   • Negative Cases (jika ada)
     
 ## Saran untuk Pengembangan Selanjutnya :
 
