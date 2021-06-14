@@ -141,7 +141,9 @@
 ## Hasil Implementasi 
    ### Screenshot Sistem
     
-   ### Link Aplikasi (klo dah deploy)
+   ### Link Aplikasi
+   
+   http://agrirental.infinityfreeapp.com/
 
 ## Testing
    ### Positive Cases
