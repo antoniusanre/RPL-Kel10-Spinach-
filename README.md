@@ -74,6 +74,10 @@
 ## Hasil dan Pembahasan
 
    ### Use Case Diagram
+   
+   ![useCase_1](https://user-images.githubusercontent.com/55394766/121964094-33559500-cd95-11eb-9a52-12ba2b4dd111.jpeg)
+   
+   ![useCase_2](https://user-images.githubusercontent.com/55394766/121964110-394b7600-cd95-11eb-9901-9a46650f2122.jpeg)
         
    ### Activity Diagram
    
@@ -117,9 +121,9 @@
    ### Link Aplikasi (klo dah deploy)
 
 ## Testing
-   • Positive Cases
+   ### Positive Cases
    
-   • Negative Cases (jika ada)
+   ### Negative Cases (jika ada)
     
 ## Saran untuk Pengembangan Selanjutnya :
 
