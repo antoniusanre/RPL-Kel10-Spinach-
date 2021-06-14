@@ -5,19 +5,19 @@
 ## Asisten Pratikum
 
 | Nama                    | NIM       |
-| ------------------------|:---------:|
+| ----------------------- |:---------:|
 | Levina Siatono          | G64180019 |
 | Ali Naufal Amrullah     | G64180080 |
 | Muhammad Fauzan Ramadhan| G64180117 |
    
 ## Anggota Kelompok
-   • Ahmad Hadryan Mora - G64190001        : Backend Developer
-   
-   • Rafida Nisa Maghfiroh - G64190038     : UI/UX Designer
-   
-   • Faris Ilham Noormandiri - G64190051   : Frontend Developer
-   
-   • Antonius Anre Sianturi - G64190053    : Project Manager
+
+| Nama                    | NIM       | Role               |
+| ----------------------- |:---------:| ------------------:|
+| Ahmad Hadryan Mora      | G64190001 | Backend Developer  |
+| Rafida Nisa Maghfiroh   | G64190038 | UI/UX Designer     |
+| Faris Ilham Noormandiri | G64190051 | Frontend Developer |
+| Antonius Anre Sianturi  | G64190053 | Project Manager    |
    
 ## Deskripsi Singkat
    Agrirental adalah aplikasi berbasis web yang menjadi tempat transaksi antara individu yang memiliki mobil sebagai aset untuk disewakan dan orang-orang yang sedang     membutuhkan mobil di suatu tempat tertentu. Terdapat beberapa fitur dalam kemudahan penyewaan mobil antara lain, fitur booking, deskripsi mobil beserta perjalanan hidupnya, pantau ketersediaan mobil, dan fitur review/rate/komentar.
