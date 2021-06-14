@@ -81,24 +81,37 @@
         
    ### Activity Diagram
    
+   #### • Tambah Produk
+   
    ![activityDiagramTambahProduk](https://user-images.githubusercontent.com/55394766/121841749-2e4b0400-cd09-11eb-8a73-49f5235f7997.jpeg)
+    
+   #### • Ubah Profile
    
    ![activityDiagramUbahProfile](https://user-images.githubusercontent.com/55394766/121841754-3014c780-cd09-11eb-88d7-b0021d8909b9.jpeg)
    
+   #### • Update Status
+   
    ![activityDiagramUpdateStatus](https://user-images.githubusercontent.com/55394766/121841756-30ad5e00-cd09-11eb-9bc5-ee45a523a07e.jpeg)
+   
+   #### • Hapus Produk
    
    ![activityDiagramHapusProduk](https://user-images.githubusercontent.com/55394766/121841761-32772180-cd09-11eb-946d-9ee15adf9a20.jpeg)
    
+   #### • Lihat Detail Produk
+   
    ![activityDiagramLihatDetailProduk](https://user-images.githubusercontent.com/55394766/121841764-330fb800-cd09-11eb-9a84-e4beb5db98f1.jpeg)
+   
+   #### • Lihat Order
    
    ![activityDiagramLihatOrder](https://user-images.githubusercontent.com/55394766/121841765-33a84e80-cd09-11eb-8278-a62c18f6c6ba.jpeg)
    
+   #### • Logout
+   
    ![activityDiagramLogout](https://user-images.githubusercontent.com/55394766/121841766-3440e500-cd09-11eb-9b66-f22943edd072.jpeg)
    
+   #### • ORder Produk
    ![activityDiagramOrderProduk](https://user-images.githubusercontent.com/55394766/121841767-34d97b80-cd09-11eb-8c7d-c9338cf6a634.jpeg)
    
-
-     
    ### Class Diagram
    
    ### Entity Relationship Diagram
@@ -108,6 +121,14 @@
    ### Arsitektur Sistem 
     
    ### Fungsi Utama yang Dikembangkan
+   • Pengguna dapat membuat akun
+   
+   • Pengguna (penyewa) dapat menyewakan kendaraannya di agrirental serta dapat mengubah informasi sewaktu-waktu tentang kendaraanna yang disewakan
+   
+   • Status barang yang disewakan dipegang penuh oleh penyewa 
+   
+   • Pengguna (pelanggan) dapat mencari kendaraan yang diinginkan dengan kolom search bar
+   
     
    ### Fungsi CRUD
   
