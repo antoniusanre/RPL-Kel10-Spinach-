@@ -14,34 +14,35 @@
     background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("Bg1.jpeg");
 }
 
-.navbar {
+#navbar {
     width: 85%;
     margin: auto;
     padding: 35px 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background: none;
 }
 
 .logo {
     width: 100px;
     cursor: pointer;
+    padding-left: 50px
 }
 
-.navbar ul li {
+#navbar ul li {
     list-style: none;
     display: inline-block;
     margin: 0 20px;
     position: relative;
 }
 
-.navbar ul li a {
+#navbar ul li a {
     text-decoration: none;
-    color: #fff;
     text-transform: uppercase;
 }
 
-.navbar ul li::after {
+#navbar ul li::after {
     content: '';
     height: 3px;
     width: 0;
@@ -52,7 +53,7 @@
     transition: 0.5s;
 }
 
-.navbar ul li:hover::after {
+#navbar ul li:hover::after {
     width: 100%;
 }
 
@@ -144,14 +145,14 @@ button:hover span {
     
 }
 
-select {
+input {
     font-size: 10px;
     background: none;
     font-size: 15px;
 	width: 80%;
 	padding: 10px;
 	border: 1px solid white;
-	border-radius: 5px;
+	border-radius: 20px;
 	resize: vertical;
 }
 
