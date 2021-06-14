@@ -13,7 +13,7 @@
 ## Anggota Kelompok
 
 | Nama                    | NIM       | Role               |
-| ----------------------- |:---------:| ------------------:|
+| ----------------------- |:---------:| :-----------------:|
 | Ahmad Hadryan Mora      | G64190001 | Backend Developer  |
 | Rafida Nisa Maghfiroh   | G64190038 | UI/UX Designer     |
 | Faris Ilham Noormandiri | G64190051 | Frontend Developer |
