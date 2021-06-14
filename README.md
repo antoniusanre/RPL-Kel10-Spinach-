@@ -14,7 +14,7 @@
 ## Anggota Kelompok
 
 | Nama                    | NIM       | Role               |
-| ----------------------- |:---------:| :-----------------:|
+| ----------------------- |:---------:| :----------------: |
 | Ahmad Hadryan Mora      | G64190001 | Backend Developer  |
 | Rafida Nisa Maghfiroh   | G64190038 | UI/UX Designer     |
 | Faris Ilham Noormandiri | G64190051 | Frontend Developer |
@@ -141,9 +141,20 @@
 
 ## Testing
    ### Positive Cases
+   | No  | Scenario                                      | Steps                                         | Hasil yang diharapkan    | Hasil yang didapat       |
+   | --- |:---------------------------------------------:| :-------------------------------------------: | :----------------------: | :----------------------: |
+   | 1   | User login dengan akun yang sudah didaftarkan | User mengakses Argirental lalu ke menu masuk  | Login akun berhasil      | Login akun berhasil      |
+   | 2   | User mendaftar akun sampai berhasil           | User mengakses Agrirental lalu ke menu daftar | Daftar akun berhasil     | Daftar akun berhasil     |
+   | 3   | Mitra/penyewa menambah barang sampai berhasil | Blablablablablablablablablalbalbalbalblablala | Menambah barang berhasil | Menambah barang berhasil |
    
    ### Negative Cases (jika ada)
-    
+   | No  | Scenario                                      | Steps                                         | Hasil yang diharapkan    | Hasil yang didapat       |
+   | --- |:---------------------------------------------:| :-------------------------------------------: | :----------------------: | :----------------------: |
+   | 1   | User login dengan akun yang sudah didaftarkan | User mengakses Argirental lalu ke menu masuk  | Login akun gagal         | Login akun gagal         |
+   | 2   | User mendaftar akun sampai berhasil           | User mengakses Agrirental lalu ke menu daftar | Daftar akun gagal        | Daftar akun gagal        |  
+   | 3   | Mitra/penyewa menambah barang sampai berhasil | Blablablablablablablablablalbalbalbalblablala | Menambah barang gagal    | Menambah barang gagal    |
+   
 ## Saran
 
+## Penutup
     
