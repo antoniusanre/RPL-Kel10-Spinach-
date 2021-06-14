@@ -22,7 +22,13 @@
    
 ## Deskripsi Singkat
    Agrirental adalah aplikasi berbasis web yang menjadi tempat transaksi antara individu yang memiliki mobil sebagai aset untuk disewakan dan orang-orang yang sedang     membutuhkan mobil di suatu tempat tertentu. Terdapat beberapa fitur dalam kemudahan penyewaan mobil antara lain, fitur booking, deskripsi mobil beserta perjalanan hidupnya, pantau ketersediaan mobil, dan fitur review/rate/komentar.
-    
+
+## Tujuan
+
+   1. Memudahkan orang untuk menyewa mobil
+   2. Menyediakan pilihan mobil yang akan disewa sesuai dengan kriteria dan keinginan pelanggan
+   3. Memudahkan interaksi antara pelanggan dengan penyedia mobil
+  
 ## User Analysis
 
    1. Sebagai pengguna produk terdaftar, saya ingin mendapatkan peminjaman mobil yang berada di sekitar saya agar saya dapat dengan cepat menjangkau dan mendapatkan sewaan mobil.
