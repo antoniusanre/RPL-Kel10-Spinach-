@@ -115,7 +115,9 @@
    ![ERD_2](https://user-images.githubusercontent.com/55394766/121966663-394d7500-cd99-11eb-9360-02a6b683caeb.jpeg)
     
    ### Arsitektur Sistem 
-    
+   
+   ![arsitekturSistem](https://user-images.githubusercontent.com/55394766/121969905-83395980-cd9f-11eb-8a01-189e1f4ff086.jpeg)
+   
    ### Fungsi Utama yang Dikembangkan
    • Pengguna dapat membuat akun
    
