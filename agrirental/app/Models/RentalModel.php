@@ -29,4 +29,13 @@ class RentalModel extends Model
     {
         return $this->db->table('rental')->select('kota_r')->distinct()->get()->getResultArray();
     }
+
+    public function countProduk($id = false)
+    {
+        if ($id == false) {
+            return $this->countAll();
+        } else {
+            return $this->where(['id_rental' => $id])->countAllResults();
+        }
+    }
 }

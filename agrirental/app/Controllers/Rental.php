@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+use App\Models\KomentarModel;
 use App\Models\OrderModel;
 use App\Models\PenyewaModel;
 use App\Models\ProdukModel;
@@ -14,6 +15,7 @@ class Rental extends BaseController
     protected $penyewaModel;
     protected $produkModel;
     protected $orderModel;
+    protected $komentarModel;
     protected $rental;
     protected $produk;
     protected $order;
@@ -26,6 +28,7 @@ class Rental extends BaseController
         $this->penyewaModel = new PenyewaModel();
         $this->produkModel = new ProdukModel();
         $this->orderModel = new OrderModel();
+        $this->komentarModel = new KomentarModel();
         $this->rental = $this->rentalModel->where(['id_p' => session()->id])->first();
         $this->produk = $this->produkModel->where(['id_rental' => $this->rental['id_rental']])->findAll();
         $this->order = $this->orderModel->where(['o_rental' => $this->rental['id_rental']])->findAll();
@@ -40,7 +43,10 @@ class Rental extends BaseController
         if (!$this->rental) {
 
             return redirect()->to('/rental/daftar');
+        } else {
+            return redirect()->to('/rental/profile');
         }
+
 
         $data = [
             'title' => 'Welcome Mitra',
@@ -151,10 +157,15 @@ class Rental extends BaseController
             return redirect()->to('/rental/daftar');
         }
 
+
         $data = [
             'title' => 'Profile Mitra' . $this->rental['nama_r'],
             'mitra' => $this->rental,
             'validation' => \Config\Services::validation(),
+            'tproduk' => $this->produkModel->countProduk($this->rental['id_rental']),
+            'tkomen' => $this->komentarModel->countKomen($this->rental['id_rental']),
+            'rmit' => $this->produkModel->ratingMitra($this->rental['id_rental'])
+
         ];
         return view('/rental/profile', $data);
     }
@@ -194,13 +205,13 @@ class Rental extends BaseController
                     'alpha_numeric_space' => 'Username harus berupa huruf, angka, spasi, atau beberapa simbol'
                 ]
             ],
-            'nik_r' => [
-                'rules' => 'required|exact_length[16]',
-                'errors' => [
-                    'required' => 'NIK harus diisi!',
-                    'min_length' => 'Panjang NIK 16 karakter'
-                ]
-            ],
+            // 'nik_r' => [
+            //     'rules' => 'required|exact_length[16]',
+            //     'errors' => [
+            //         'required' => 'NIK harus diisi!',
+            //         'min_length' => 'Panjang NIK 16 karakter'
+            //     ]
+            // ],
             'provinsi_r' => [
                 'rules' => 'required',
                 'errors' => [
@@ -237,35 +248,35 @@ class Rental extends BaseController
                     'required' => 'Alamat Rinci harus diisi!',
                 ]
             ],
-            'pict_rent' => [
-                'rules' => 'max_size[pict_rent,1024]|is_image[pict_rent]|mime_in[pict_rent,image/jpg,image/jpeg,image/png]',
-                'errors' => [
-                    'max_size' => 'Ukuran gambar terlalu besar (max: 1MB)',
-                    'is_image' => 'Pilih gambar!',
-                    'mime_in' => 'Pilih gambar!'
-                ]
-            ]
+            // 'pict_rent' => [
+            //     'rules' => 'max_size[pict_rent,1024]|is_image[pict_rent]|mime_in[pict_rent,image/jpg,image/jpeg,image/png]',
+            //     'errors' => [
+            //         'max_size' => 'Ukuran gambar terlalu besar (max: 1MB)',
+            //         'is_image' => 'Pilih gambar!',
+            //         'mime_in' => 'Pilih gambar!'
+            //     ]
+            // ]
         ])) {
             // dd($validation);
             return redirect()->to('/rental/profile')->withInput();
         };
 
-        $fileProfile = $this->request->getFile('pict_rent');
-        $namaLama = $this->request->getVar('pict_rl');
-        //cek gambar, apakah tetap gambar lama
-        if ($fileProfile->getError() == 4) {
-            $namaProfile = $this->request->getVar('pict_rl');
-        } else {
-            //genereate nama file random
-            $namaProfile = $fileProfile->getRandomName();
-            //pindahkan gambar
-            $fileProfile->move('img', $namaProfile);
-            //hapus file lama
-            if ($namaLama != 'Profile.png') {
+        // $fileProfile = $this->request->getFile('pict_rent');
+        // $namaLama = $this->request->getVar('pict_rl');
+        // //cek gambar, apakah tetap gambar lama
+        // if ($fileProfile->getError() == 4) {
+        //     $namaProfile = $this->request->getVar('pict_rl');
+        // } else {
+        //     //genereate nama file random
+        //     $namaProfile = $fileProfile->getRandomName();
+        //     //pindahkan gambar
+        //     $fileProfile->move('img', $namaProfile);
+        //     //hapus file lama
+        //     if ($namaLama != 'Profile.png') {
 
-                unlink('img/' . $namaLama);
-            }
-        }
+        //         unlink('img/' . $namaLama);
+        //     }
+        // }
 
         // ambil data inputan
         $data = $this->request->getVar();
@@ -277,11 +288,11 @@ class Rental extends BaseController
             'nama_cp' => $data['nama_cp'],
             'alamat_r' => $data['alamat_r'],
             'email_r' => $data['email_r'],
-            'nik_r' => $data['nik_r'],
+            // 'nik_r' => $data['nik_r'],
             'provinsi_r' => $data['provinsi_r'],
             'kota_r' => $data['kota_r'],
             'kecamatan_r' => $data['kecamatan_r'],
-            'pict_rent' => $namaProfile,
+            // 'pict_rent' => $namaProfile,
         ]);
 
         // kasih informasi kalau udah berhasil terupdate
@@ -692,14 +703,16 @@ class Rental extends BaseController
         $data = [
             'title' => ' Orderan Mitra ' . $this->rental['nama_r'],
             'produk' => $this->produk,
-            'order' => $this->order,
+            'order' => $this->orderModel->getCompleteOrder2($this->rental['id_rental']),
+            'torder' => $this->orderModel->countOrderRental($this->rental['id_rental']),
+
             'validation' => \Config\Services::validation(),
         ];
         return view('/rental/order', $data);
     }
 
     // detail orderan mitra
-    public function orderDetail()
+    public function orderDetail($id)
     {
         if (!$this->rental) {
             return redirect()->to('/rental/daftar');
@@ -707,16 +720,43 @@ class Rental extends BaseController
 
         $data = [
             'title' => ' Detail Orderan Mitra ' . $this->rental['nama_r'],
-            'produk' => $this->produk,
-            'order' => $this->order,
+            'order' => $this->orderModel->getCompleteOrder3($id),
             'validation' => \Config\Services::validation(),
         ];
+
+
         return view('/rental/orderDetail', $data);
     }
 
     // update status orderan
     public function orderUpdate()
     {
+        // terima inputan perintah
+        $input = $this->request->getVar();
+        $idorder = $input['id_order'];
+        $statusl = $input['statusl'];
+        $status = $input['status'];
+
+        // kalau batal
+        if ($status == "Batal") {
+            $this->orderModel->update($idorder, ['status' => 'Batal']);
+        }
+        if ($status == "Bermasalah") {
+            $this->orderModel->update($idorder, ['status' => 'Bermasalah']);
+        }
+
+        // update status konfirmasi ke tunggu
+        if ($status == "Menunggu") {
+            $this->orderModel->update($idorder, ['status' => 'Menunggu']);
+        }
+
+        // update status konfirmasi ke selesai
+        if ($status == "Selesai") {
+            $this->orderModel->update($idorder, ['status' => 'Selesai']);
+        }
+
+        // balikin ke halaman order
+        return redirect()->to('/rental/order');
     }
 
     // hapus produk

@@ -10,15 +10,16 @@
 </head>
 
 <body>
-    <div class="landing">
-        <div class="navbar">
-            <a href="/"><img src="/img/logo.png" class="logo"></a>
-            <ul>
-                <li><a href="/rental">MITRA</a></li>
-                <li><a href="/#tentang">TENTANG</a></li>
-                <li><a href="/penyewa/profile"><img src="/img/<?= $penyewa['pict_p']; ?>" alt="Profile Picture" width="60.47px"> <?= $penyewa['username_p']; ?></a></li>
-            </ul>
-        </div>
+    <div class="navbar">
+        <a href="/"><img src="/img/logo.png" class="logo"></a>
+        <ul>
+            <li><a href="/rental">MITRA</a></li>
+            <li><a href="/#tentang">TENTANG</a></li>
+            <li><a href="/penyewa/order">ORDER</a></li>
+            <li><a href="/penyewa/profile"><img src="/img/<?= $penyewa['pict_p']; ?>" alt="Profile Picture" width="60.47px" id="profile1"> <?= $penyewa['username_p']; ?></a>
+            </li>
+            <li><a href="/logout"><i class="fas fa-sign-out-alt"></i></a></li>
+        </ul>
     </div>
     <div class="alamat pengguna">
         <hr class="kotak">

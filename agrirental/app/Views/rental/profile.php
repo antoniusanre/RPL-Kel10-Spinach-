@@ -4,45 +4,45 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="./Mitra_Profil Mitra.css" rel="stylesheet" />
+    <link href="/css/Mitra_Profil Mitra.css" rel="stylesheet" />
     <script src="https://kit.fontawesome.com/eaa6d1f26f.js" crossorigin="anonymous"></script>
-    <title>Mitra - Profil Mitra</title>
+    <title><?= $title; ?></title>
 </head>
 
 <body>
     <header>
         <div class="container">
             <div class="atas">
-                <a href="">
-                    <img class="logo" src="Logo.png" />
+                <a href="/penyewa">
+                    <img class="logo" src="/img/logo.png" />
                 </a>
                 <i class="fas fa-store-alt fa-lg" style="position: fixed; float: right; top: 34px; right: 2.3%;"></i>
                 <a class="sUname">Agrirental</a>
                 <a class="panah">&#10095;</a>
-                <a href="" class="sAkun2">Profil Mitra</a>
+                <a href="/rental/profile" class="sAkun2">Profil Mitra</a>
             </div>
             <div class="menu">
                 <ul>
                     <li>
-                        <a href="">
+                        <a href="/rental/profile">
                             <span class="icon"><i class="fas fa-store-alt" style="color: #4ACFAC;"></i></span>
                             <span class="profil" style="color: #4ACFAC;">Profil Mitra</span>
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a href="/rental/produk">
                             <span class="icon"><i class="fas fa-car"></i></span>
                             <span class="produk">Produk</span>
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a href="/rental/order">
                             <span class="icon"><i class="fas fa-clipboard-list"></i></span>
                             <span class="orderan">Orderan</span>
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a href="/penyewa">
                             <span class="icon"><i class="fas fa-sign-out-alt"></i></span>
                             <span class="keluar">Keluar</span>
                         </a>
@@ -56,8 +56,8 @@
     <div class="mitra">
         <hr class="kotak2">
         <i class="fas fa-store-alt fa-3x" style="position: absolute; top: 210px; left: 25%; background: none;"></i>
-        <a class="namatoko">Agrirental</a>
-        <a class="gabung">Waktu bergabung: 32-13-2100</a>
+        <a class="namatoko"><?= $mitra['nama_r']; ?></a>
+        <a class="gabung">Waktu bergabung: <?= explode(" ", $mitra['created_at'])[0]; ?></a>
         <hr class="kotak3">
         <i class="fas fa-car fa-lg" style="left: 23.65%; top: 298px; position: absolute; background: none;"></i>
         <a href="">
@@ -65,40 +65,40 @@
                 <a class="prod">Produk</a>
                 <a style="position: absolute; top: 294px;
           right: 51%; color: #4ACFAC;">&#10095;</a>
-                <a class="jumlahprod">1</a>
+                <a class="jumlahprod"><?= $tproduk; ?></a>
             </div>
         </a>
         <hr class="kotak4">
         <i class="far fa-star fa-lg" style="left: 23.5%; top: 332px; position: absolute; background: none;"></i>
-        <a href="">
+        <a href="/rental/produk">
             <div class="penilaian">
                 <a class="nilai">Penilaian Mitra</a>
                 <a style="position: absolute; top: 330px;
           right: 51%; color: #4ACFAC" ;>&#10095;</a>
-                <a class="nilaimitra">5.0(10)</a>
+                <a class="nilaimitra"><?= $rmit ?>.0(<?= $tkomen; ?>)</a>
             </div>
         </a>
     </div>
     <div class="formform">
-        <form>
+        <form action="/rental/update" method="post">
             <label>Nama Mitra</label>
-            <input type="text" id="" name="" value="Agrirental">
+            <input type="text" id="" name="nama_r" value="<?= $mitra['nama_r']; ?>">
             <label>Email</label>
-            <input type="email" id="" name="" value="rafidanisa@apps.ipb.ac.id">
+            <input type="email" id="" name="email_r" value="<?= $mitra['email_r']; ?>">
             <label>Nama CP</label>
-            <input type="text" id="" name="" value="Aku">
+            <input type="text" id="" name="nama_cp" value="<?= $mitra['nama_cp']; ?>">
             <label>Nomor CP</label>
-            <input type="tel" id="" name="" value="081234567890">
+            <input type="tel" id="" name="no_cp" value="<?= $mitra['no_cp']; ?>">
             <label>Alamat Rinci</label>
-            <input type="text" id="" name="" value="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" style="width: 79.5%">
+            <input type="text" id="" name="alamat_r" value="<?= $mitra['alamat_r']; ?>" style="width: 79.5%">
             <label>Kecamatan</label>
-            <input type="text" id="" name="" value="xxxxxxxxxxxxxx">
+            <input type="text" id="" name="kecamatan_r" value="<?= $mitra['kecamatan_r']; ?>">
             <label>Kota/Kab</label>
-            <input type="text" id="" name="" value="xxxxxx xxxxx">
+            <input type="text" id="" name="kota_r" value="<?= $mitra['kota_r']; ?>">
             <label>Provinsi</label>
-            <input type="text" id="" name="" value="xxxx xxxxx">
+            <input type="text" id="" name="provinsi_r" value="<?= $mitra['provinsi_r']; ?>">
             <a href="">
-                <button>Simpan</button>
+                <button type="submit">Simpan</button>
             </a>
         </form>
     </div>

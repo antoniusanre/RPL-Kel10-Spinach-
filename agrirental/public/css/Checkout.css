@@ -1,161 +1,163 @@
 * {
-    padding: 0;
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background-color: #262833;
-    color: white;
-    text-decoration: none;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: #262833;
+  color: white;
+  text-decoration: none;
+  box-sizing: border-box;
 }
 
 .navbar {
-    width: 85%;
-    margin: auto;
-    padding: 35px 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  width: 85%;
+  margin: auto;
+  padding: 35px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .logo {
-    width: 100px;
-    cursor: pointer;
+  width: 100px;
+  cursor: pointer;
 }
 
 .navbar ul li {
-    list-style: none;
-    display: inline-block;
-    margin: 0 20px;
-    position: relative;
+  list-style: none;
+  display: inline-block;
+  margin: 0 20px;
+  position: relative;
 }
 
 .navbar ul li a {
-    text-decoration: none;
-    color: #fff;
-    text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
 }
 
 .navbar ul li::after {
-    content: '';
-    height: 3px;
-    width: 0;
-    background: #4acfac;
-    position: absolute;
-    left: 0;
-    bottom: -5px;
-    transition: 0.5s;
+  content: "";
+  height: 3px;
+  width: 0;
+  background: #4acfac;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  transition: 0.5s;
 }
 
 .navbar ul li:hover::after {
-    width: 100%;
+  width: 100%;
 }
 #profile1 {
   border-radius: 50%;
-  width: 20px;
+  width: 50px;
 }
-
 
 hr.kotak {
-    width: 72.5%;
-    height: 153px;
-    margin-left: 13.7%;
-    margin-top: 10px;
-    background: #3C3E4A;
-    border: none;
+  width: 72.5%;
+  height: 153px;
+  margin-left: 13.7%;
+  margin-top: 10px;
+  background: #3c3e4a;
+  border: none;
 }
 a.ap {
-    position: absolute;
-    left: 15.9%;
-    top: 200px;
-    font-size: 20px;
-    background: none;
+  position: absolute;
+  left: 15.9%;
+  top: 200px;
+  font-size: 20px;
+  background: none;
 }
 a.nl {
-    position: absolute;
-    width: 20%;
-    left: 15.9%;
-    top: 255px;
-    font-size: 17px;
-    background: none;
-    font-weight: bold;
+  position: absolute;
+  width: 20%;
+  left: 15.9%;
+  top: 255px;
+  font-size: 17px;
+  background: none;
+  font-weight: bold;
 }
 a.nt {
-    position: absolute;
-    width: 20%;
-    left: 15.9%;
-    top: 285px;
-    font-size: 17px;
-    background: none;
-    font-weight: bold;
+  position: absolute;
+  width: 20%;
+  left: 15.9%;
+  top: 285px;
+  font-size: 17px;
+  background: none;
+  font-weight: bold;
 }
 a.al {
-    position: absolute;
-    width: 47%;
-    left: 37%;
-    top: 255px;
-    font-size: 17px;
-    background: none;
+  position: absolute;
+  width: 47%;
+  left: 37%;
+  top: 255px;
+  font-size: 17px;
+  background: none;
 }
 hr.garis {
-    position: relative;
-    width: 70%;
-    left: 15%;
-    top: -98px;
-    border: 1px solid #262833;
+  position: relative;
+  width: 70%;
+  left: 15%;
+  top: -98px;
+  border: 1px solid #262833;
 }
 hr.kotak2 {
-    position: absolute;
-    width: 72.5%;
-    height: 175px;
-    left: 13.7%;
-    top: 350px;
-    background: #3C3E4A;
-    border: none;
+  position: absolute;
+  width: 72.5%;
+  height: 175px;
+  left: 13.7%;
+  top: 350px;
+  background: #3c3e4a;
+  border: none;
 }
 a.jr {
-    position: absolute;
-    left: 15.9%;
-    top: 380px;
-    font-size: 20px;
-    background: none;
+  position: absolute;
+  left: 15.9%;
+  top: 380px;
+  font-size: 20px;
+  background: none;
 }
 .col-2 {
-    position: absolute;
-    float: left;
-    margin-left: 34%;
-    width: 30%;
-    margin-top: 35px;
-    background: none;
+  position: absolute;
+  float: left;
+  margin-left: 34%;
+  width: 30%;
+  margin-top: 35px;
+  background: none;
 }
-select, input[type=datetime-local], textarea {
-    background: none;
-    width: 95%;
-    padding: 10px;
-    border: 1px solid white;
-    border-radius: 5px;
-    resize: vertical;
+select,
+input[type="datetime-local"],
+textarea {
+  background: none;
+  width: 95%;
+  padding: 10px;
+  border: 1px solid white;
+  border-radius: 5px;
+  resize: vertical;
 }
 .garis2 {
-    position: relative;
-    width: 0px;
-    height: 70px;
-    left: 30%;
-    top: 20px;
-    border: 1px solid #262833;
+  position: relative;
+  width: 0px;
+  height: 70px;
+  left: 30%;
+  top: 20px;
+  border: 1px solid #262833;
 }
 hr.garis3 {
-    position: relative;
-    width: 70%;
-    left: 15%;
-    top: 28px;
-    border: 1px solid #262833;
+  position: relative;
+  width: 70%;
+  left: 15%;
+  top: 28px;
+  border: 1px solid #262833;
 }
 a.tb {
-    position: absolute;
-    left: 15.9%;
-    top: 468px;
-    font-size: 20px;
-    background: none;
+  position: absolute;
+  left: 15.9%;
+  top: 468px;
+  font-size: 20px;
+  background: none;
 }
 input[type="datetime-local"]::-webkit-calendar-picker-indicator {
   cursor: pointer;
@@ -163,180 +165,180 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
   filter: invert(0.8);
 }
 input[type="datetime-local"]::-webkit-calendar-picker-indicator:hover {
-  opacity: 1
+  opacity: 1;
 }
 .col-3 {
-    position: absolute;
-    float: left;
-    margin-left: 34%;
-    width: 20%;
-    margin-top: 53px;
-    background: none;
+  position: absolute;
+  float: left;
+  margin-left: 34%;
+  width: 20%;
+  margin-top: 53px;
+  background: none;
 }
 a.sampai {
-    position: absolute;
-    left: 56%;
-    top: 465px;
-    font-size: 30px;
-    background: none;
-    font-weight: bold;
+  position: absolute;
+  left: 56%;
+  top: 465px;
+  font-size: 30px;
+  background: none;
+  font-weight: bold;
 }
 .col-4 {
-    position: absolute;
-    float: left;
-    margin-left: 60%;
-    width: 20%;
-    margin-top: 53px;
-    background: none;
+  position: absolute;
+  float: left;
+  margin-left: 60%;
+  width: 20%;
+  margin-top: 53px;
+  background: none;
 }
 .garis4 {
-    position: relative;
-    width: 0px;
-    height: 70px;
-    left: 30%;
-    top: 37px;
-    border: 1px solid #262833;
+  position: relative;
+  width: 0px;
+  height: 70px;
+  left: 30%;
+  top: 37px;
+  border: 1px solid #262833;
 }
 hr.kotak3 {
-    position: absolute;
-    width: 72.5%;
-    height: 335px;
-    left: 13.7%;
-    top: 539px;
-    background: #3C3E4A;
-    border: none;
+  position: absolute;
+  width: 72.5%;
+  height: 335px;
+  left: 13.7%;
+  top: 539px;
+  background: #3c3e4a;
+  border: none;
 }
 a.namatoko {
-    position: absolute;
-    width: 27.5%;
-    left: 19%;
-    top: 566px;
-    background: none;
+  position: absolute;
+  width: 27.5%;
+  left: 19%;
+  top: 566px;
+  background: none;
 }
 a.judul {
-    position: absolute;
-    width: 23.5%;
-    left: 23%;
-    top: 610px;
-    background: none;
+  position: absolute;
+  width: 23.5%;
+  left: 23%;
+  top: 610px;
+  background: none;
 }
 a.merek-jenis {
-    position: absolute;
-    width: 23.5%;
-    left: 23%;
-    top: 640px;
-    background: none;
+  position: absolute;
+  width: 23.5%;
+  left: 23%;
+  top: 640px;
+  background: none;
 }
 a.harga12jam {
-    position: absolute;
-    left: 48%;
-    top: 566px;
-    background: none;
+  position: absolute;
+  left: 48%;
+  top: 566px;
+  background: none;
 }
 a.hargaprod {
-    position: absolute;
-    width: 11%;
-    left: 48%;
-    top: 610px;
-    background: none;
+  position: absolute;
+  width: 11%;
+  left: 48%;
+  top: 610px;
+  background: none;
 }
 a.jumlahjam {
-    position: absolute;
-    left:61%;
-    top: 566px;
-    background: none;
+  position: absolute;
+  left: 61%;
+  top: 566px;
+  background: none;
 }
 a.jumlah {
-    position: absolute;
-    width: 7%;
-    left:61%;
-    top: 610px;
-    background: none;
+  position: absolute;
+  width: 7%;
+  left: 61%;
+  top: 610px;
+  background: none;
 }
 a.harga {
-    position: absolute;
-    left: 71%;
-    top: 566px;
-    background: none;
+  position: absolute;
+  left: 71%;
+  top: 566px;
+  background: none;
 }
 a.hartot {
-    position: absolute;
-    width: 13.5%;
-    left: 71%;
-    top: 610px;
-    background: none;
+  position: absolute;
+  width: 13.5%;
+  left: 71%;
+  top: 610px;
+  background: none;
 }
 hr.garis5 {
-    position: relative;
-    width: 70%;
-    left: 15%;
-    top: 225px;
-    border: 1px solid #262833;
+  position: relative;
+  width: 70%;
+  left: 15%;
+  top: 225px;
+  border: 1px solid #262833;
 }
 label {
-    position: absolute;
-    left: 15.9%;
-    top: 730px;
-    background: none;
+  position: absolute;
+  left: 15.9%;
+  top: 730px;
+  background: none;
 }
 .col-5 {
-    position: absolute;
-    float: left;
-    margin-left: 19%;
-    width: 30%;
-    margin-top: 25px;
-    background: none;
+  position: absolute;
+  float: left;
+  margin-left: 19%;
+  width: 30%;
+  margin-top: 25px;
+  background: none;
 }
 a.total {
-    position: absolute;
-    left: 59%;
-    top: 729px;
-    background: none;
-    font-size: 18px;
+  position: absolute;
+  left: 59%;
+  top: 729px;
+  background: none;
+  font-size: 18px;
 }
 a.jumlahtotal {
-    position: absolute;
-    width: 13.5%;
-    left: 71%;
-    top: 730px;
-    background: none;
+  position: absolute;
+  width: 13.5%;
+  left: 71%;
+  top: 730px;
+  background: none;
 }
 a.metode {
-    position: absolute;
-    left: 57.3%;
-    top: 764px;
-    background: none;
-    font-size: 18px;
+  position: absolute;
+  left: 57.3%;
+  top: 764px;
+  background: none;
+  font-size: 18px;
 }
 button {
-    position: absolute;
-    width: 130px;
-    height: 35px;
-    left: 71%;
-    top: 815px;
-    background: #4ACFAC;
-    border: none;
-    cursor: pointer;
-    border-radius: 25px;
-    font-size: 15px;
+  position: absolute;
+  width: 130px;
+  height: 35px;
+  left: 71%;
+  top: 815px;
+  background: #4acfac;
+  border: none;
+  cursor: pointer;
+  border-radius: 25px;
+  font-size: 15px;
 }
 button:hover {
-    opacity: 0.7;
-    transition: .3s;
+  opacity: 0.7;
+  transition: 0.3s;
 }
 a.cod {
-    position: absolute;
-    width: 13.5%;
-    left: 71%;
-    top: 765px;
-    background: none;
+  position: absolute;
+  width: 13.5%;
+  left: 71%;
+  top: 765px;
+  background: none;
 }
 footer {
-    position: fixed;
-    margin: 5px;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    color: white;
-    text-align: center;
+  position: fixed;
+  margin: 5px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
 }

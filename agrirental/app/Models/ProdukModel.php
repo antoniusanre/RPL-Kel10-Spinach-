@@ -38,4 +38,29 @@ class ProdukModel extends Model
 
         return $prod;
     }
+
+    public function countProduk($id = false)
+    {
+        if ($id == false) {
+            return $this->countAll();
+        } else {
+            return $this->where(['id_rental' => $id])->countAllResults();
+        }
+    }
+
+    public function ratingMitra($id)
+    {
+        $produk = $this->where(['id_rental' => $id])->get()->getResultArray();
+        $count = $this->countProduk($id);
+        $sum = 0;
+        foreach ($produk as $p) {
+            if ($p['rating']) {
+
+                $sum = $sum + $p['rating'];
+            }
+        }
+        $avg = $sum / $count;
+
+        return $avg;
+    }
 }

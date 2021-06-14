@@ -1,5 +1,4 @@
 <?= $this->extend('layout/templater'); ?>
-
 <?= $this->section('content'); ?>
 <link rel="stylesheet" href="/css/Mitra_Orderan.css">
 <h1>index rental</h1>

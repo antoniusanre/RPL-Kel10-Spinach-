@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+use App\Models\KomentarModel;
 use App\Models\OrderModel;
 use CodeIgniter\I18n\Time;
 use App\Models\PenyewaModel;
@@ -16,12 +17,14 @@ class Penyewa extends BaseController
     protected $produkModel;
     protected $rentalModel;
     protected $orderModel;
+    protected $komentarModel;
     public function __construct()
     {
         $this->penyewaModel = new PenyewaModel();
         $this->produkModel = new ProdukModel();
         $this->rentalModel = new RentalModel();
         $this->orderModel = new OrderModel();
+        $this->komentarModel = new KomentarModel();
     }
 
     public function index()
@@ -341,6 +344,9 @@ class Penyewa extends BaseController
             'produk' => $produk,
             'penyewa' => $this->penyewaModel->getPenyewa(session()->id),
             'rental' => $this->rentalModel->getRental($produk['id_rental']),
+            'komen' => $this->komentarModel->getKomenProduk($id),
+            'tkomen' => $this->komentarModel->countKomen($id),
+            'tsewa' => $this->orderModel->countOrder($id)
         ];
 
 
@@ -471,11 +477,13 @@ class Penyewa extends BaseController
             return redirect()->to('/');
         }
 
+        $order = $this->orderModel->getCompleteOrder(session()->id);
+
         // kirim data ke order
         $data = [
             'title' => 'Orderan ' . session()->nama_p,
             'penyewa' => $this->penyewaModel->getPenyewa(session()->id),
-            'produk' => $this->produkModel->where(['o_penyewa' => session()->id]),
+            'order' => $order,
         ];
         return view('penyewa/order', $data);
     }
@@ -483,11 +491,52 @@ class Penyewa extends BaseController
     // arahkan ke halaman detail pemesanan
     public function orderDetail()
     {
+        // cek udah login atau belum dengan session
+        if (!isset(session()->id)) {
+            return redirect()->to('/');
+        }
+
+        $input = $this->request->getVar();
+        $idprod = $input['id_order'];
+        $produk = $this->produkModel->getProduk($idprod);
+        $rental = $this->rentalModel->getRental($produk['id_rental']);
+
+        // kirim data ke order
+        $data = [
+            'title' => 'Orderan ' . session()->nama_p,
+            'penyewa' => $this->penyewaModel->getPenyewa(session()->id),
+            'order' => $produk,
+            'rental' => $rental,
+        ];
+        return view('penyewa/orderDetail', $data);
     }
 
     // fungsi untuk update status pemesanan
     public function orderUpdate()
     {
+        // terima inputan perintah
+        $input = $this->request->getVar();
+        $idorder = $input['id_order'];
+        $statusl = $input['statusl'];
+        $status = $input['status'];
+
+        // kalau batal
+        if ($status == "Batal") {
+            $this->orderModel->update($idorder, ['status' => 'Batal']);
+        }
+
+        // update status tunggu ke berlangsung
+        if ($status == "Berlangsung") {
+            $this->orderModel->update($idorder, ['status' => 'Berlangsung']);
+        }
+
+        // update status berlangsung ke konfirmasi
+        if ($status == "Konfirmasi 2") {
+            $this->orderModel->update($idorder, ['status' => 'Konfirmasi 2']);
+        }
+
+        // balikin ke halaman order
+        return redirect()->to('/penyewa/order');
     }
 
     // arahkan ke halaman favorit
@@ -498,11 +547,75 @@ class Penyewa extends BaseController
     // arahkan ke halaman penilaian
     public function nilai()
     {
+        // cek udah login atau belum dengan session
+        if (!isset(session()->id)) {
+            return redirect()->to('/');
+        }
+
+        $input = $this->request->getVar();
+        $idorder = $input['id_order'];
+
+        $order = $this->orderModel->getOrder($idorder);
+        // dd($order);
+        $idprod = $order['o_produk'];
+        $produk = $this->produkModel->getProduk($idprod);
+        $rental = $this->rentalModel->getRental($produk['id_rental']);
+
+        // kirim data ke nilai
+        $data = [
+            'title' => 'Orderan ' . session()->nama_p,
+            'penyewa' => $this->penyewaModel->getPenyewa(session()->id),
+            'produk' => $produk,
+            'rental' => $rental,
+            'order' => $order,
+        ];
+        return view('penyewa/nilai', $data);
     }
 
     // fungsi update rating
     public function rating()
     {
+        // ambil data input
+        $input = $this->request->getVar();
+        // ambil input rating
+        $rate = $input['rating'];
+
+        // simpan id produk dan order
+        $idprod = $input['id_produk'];
+        $idorder = $input['id_order'];
+
+        // ambil data produk
+        $produk = $this->produkModel->getProduk($idprod);
+
+        // ambil data rating
+        $rating = $produk['rating'];
+        // ambil jumlah produk di order
+        $count = $this->orderModel->where(['o_produk' => $idprod])->countAllResults();
+
+        // kalau masih kosong
+        if (!$rating) {
+            $nilai = (int)$rate;
+            // kalau dah ada
+        } else {
+            $nilai = (int)($rate + $rating * $count) / ($count + 1);
+        }
+
+        // dd($nilai);
+
+        // simpan ke db
+        $this->produkModel->save([
+            'id_produk' => $idprod,
+            'rating' => $nilai
+        ]);
+
+        // simpan komentar
+        $this->komentarModel->save([
+            'id_prod' => $idprod,
+            'id_or' => $idorder,
+            'komen' => $input['komentar'],
+        ]);
+
+        return redirect()->to('/penyewa/order');
     }
 
     public function cari()

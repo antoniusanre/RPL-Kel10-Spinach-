@@ -14,8 +14,11 @@
         <a href="/"><img src="/img/logo.png" class="logo"></a>
         <ul>
             <li><a href="/rental">MITRA</a></li>
-            <li><a href="#">TENTANG</a></li>
-            <li><a href="/daftar"><i class="fas fa-user-circle fa-lg"></i> <?= $penyewa['username_p']; ?></a></li>
+            <li><a href="/#tentang">TENTANG</a></li>
+            <li><a href="/penyewa/order">ORDER</a></li>
+            <li><a href="/penyewa/profile"><img src="/img/<?= $penyewa['pict_p']; ?>" alt="Profile Picture" width="60.47px" id="profile1"> <?= $penyewa['username_p']; ?></a>
+            </li>
+            <li><a href="/logout"><i class="fas fa-sign-out-alt"></i></a></li>
         </ul>
     </div>
     <div class="container">
@@ -43,7 +46,7 @@
         </div>
         <div class="right" id="card">
             <h2><?= $produk['judul']; ?></h2>
-            <p><?= $produk['rating']; ?> | 21 Penilaian | 25x Tersewa</p>
+            <p><?= (int)$produk['rating']; ?> | <?= $tkomen; ?> Penilaian | <?= $tsewa; ?> Tersewa</p>
             <h2>Rp <?= $produk['harga']; ?>/12 jam</h2>
             <h3>Informasi Produk</h3>
             <ul>
@@ -59,11 +62,49 @@
             <p><?= $produk['deskripsi']; ?></p>
             <div class="nilaiProduk" id="card2">
                 <h4>Penilaian Produk</h4>
-                <div class="star">
-                    <p><?= ($produk['rating']) ? $produk['rating'] : '-'; ?> dari 5</p>
-                    <p>★★☆☆☆</p>
-                </div>
+                <?php if ($produk['rating']) : ?>
+                    <div class="star">
+                        <p><?= (int)$produk['rating']; ?> dari 5</p>
+                        <?php if ((int)$produk['rating'] == 1) : ?>
+                            <p>★☆☆☆☆</p>
+                        <?php elseif ((int)$produk['rating'] == 2) : ?>
+                            <p>★★☆☆☆</p>
+                        <?php elseif ((int)$produk['rating'] == 3) : ?>
+                            <p>★★★☆☆</p>
+                        <?php elseif ((int)$produk['rating'] == 4) : ?>
+                            <p>★★★★☆</p>
+                        <?php else : ?>
+                            <p>★★★★★</p>
+                        <?php endif; ?>
 
+                    </div>
+                    <!-- <div class="rating">
+                        <a href="#">Semua</a>
+                        <a href="#">5 Bintang</a>
+                        <a href="#">4 Bintang</a>
+                        <a href="#">3 Bintang</a>
+                        <a href="#">2 Bintang</a>
+                        <a href="#">1 Bintang</a>
+                    </div> -->
+                    <div class="comment">
+                        <?php foreach ($komen as $k) : ?>
+                            <a href="#">
+                                <div class="listcomment">
+                                    <div class="icon">
+                                        <img src="/img/Profile.png" alt="profile" id="image">
+                                    </div>
+                                    <div class="status">
+                                        <br> <?= $k['komen']; ?>
+                                        <br> <?= explode(" ", $k['created_at'])[0]; ?>
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        <?php endforeach; ?>
+                    </div>
+                <?php else : ?>
+                    <p>Belum Ada Penilaian</p>
+                <?php endif; ?>
             </div>
         </div>
     </div>
