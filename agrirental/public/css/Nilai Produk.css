@@ -49,12 +49,10 @@
 .navbar ul li:hover::after {
     width: 100%;
 }
-
 #profile1 {
-    border-radius: 50%;
-    width: 20px;
+  border-radius: 50%;
+  width: 20px;
 }
-
 a.orderansaya {
     position: absolute;
     top: 150px;
@@ -182,6 +180,7 @@ button:hover {
 }
 footer {
     position: fixed;
+    margin: 5px;
     left: 0;
     bottom: 0;
     width: 100%;
