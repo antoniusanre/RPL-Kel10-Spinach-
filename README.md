@@ -6,15 +6,12 @@
 
 • Nama Kelompok :
 
-    Spinach Team
+    Kelompok 10
 
 • Asisten Pratikum :
-
-    • Bang Ali
-    
-    • Bang Ojan
-    
-    • Kak Levina
+    • Levina Siatono - G64180019
+    • Ali Naufal Amrullah - G64180080    
+    • Muhammad Fauzan Ramadhan - G64180117
 
 • Anggota Kelompok :
 
@@ -56,10 +53,14 @@
         • CPU : AMD Ryzen 9 4900H (3.3 GHz)
         • GPU : NVIDIA RTX 2060
         • OS  : Windows
-    
+        
     • Spesifikasi Perangkat Lunak :
         • Text Editor : Sublime Text & Visual Studio Code
         • Browser     : Chrome & Edge
+        • Hosting     :
+        • Database    :
+        
+    • Tech
         
     • Lainnya :
         • Version Control & Collaboration Platform  : Github
