@@ -2,14 +2,14 @@
   • Kelas RPL Paralel 2
   • Kelompok 10
   
-## Asisten Pratikum :
+## Asisten Pratikum
    • Levina Siatono - G64180019
    
    • Ali Naufal Amrullah - G64180080  
    
    • Muhammad Fauzan Ramadhan - G64180117
    
-## Anggota Kelompok :
+## Anggota Kelompok
    • Ahmad Hadryan Mora - G64190001        : Backend Developer
    
    • Rafida Nisa Maghfiroh - G64190038     : UI/UX Designer
@@ -18,10 +18,10 @@
    
    • Antonius Anre Sianturi - G64190053    : Project Manager
    
-## Deskripsi Singkat :
+## Deskripsi Singkat
    Rental Mobil adalah aplikasi berbasis web yang menjadi tempat transaksi antara individu yang memiliki mobil sebagai aset untuk disewakan dan orang-orang yang sedang     membutuhkan mobil di suatu tempat tertentu. Terdapat beberapa fitur dalam kemudahan penyewaan mobil antara lain, fitur booking, deskripsi mobil beserta perjalanan hidupnya, pantau ketersediaan mobil, chat, dan fitur review/rate/komentar.
     
-## User Analysis :
+## User Analysis
 
    1. Sebagai pengguna produk terdaftar, saya ingin mendapatkan peminjaman mobil yang berada di sekitar saya agar saya dapat dengan cepat menjangkau dan mendapatkan sewaan mobil.
     
@@ -43,16 +43,16 @@
     
    10. Sebagai pengguna produk terdaftar, agar dapat melihat pilihan yang sudah saya simpan, saya dapat melihatnya di menu ‘keranjang’.
     
-## Spesifikasi Teknis Lingkungan Pengembangan :
+## Spesifikasi Teknis Lingkungan Pengembangan
     
-   ### Spesifikasi Perangkat Keras :
+   ### Spesifikasi Perangkat Keras
    • CPU : AMD Ryzen 9 4900H (3.3 GHz)
         
    • GPU : NVIDIA RTX 2060
         
    • OS  : Windows
         
-   ### Spesifikasi Perangkat Lunak :
+   ### Spesifikasi Perangkat Lunak
    • Text Editor : Sublime Text & Visual Studio Code
    
    • Browser     : Chrome & Edge
@@ -61,44 +61,62 @@
    
    • Database    :
         
-   ### Bahasa dan Framework :
+   ### Bahasa dan Framework
    • Frontend  : HTML, CSS, Javascript
    
    • Backend   : PHP, Code Igniter 4
         
-   ### Lainnya :
+   ### Lainnya
    • Version Control & Collaboration Platform  : Github
    
    • Project Management Tools                  : Trello
 
-## Hasil dan Pembahasan :
+## Hasil dan Pembahasan
 
-   • Use Case Diagram :
+   ### Use Case Diagram
         
-   • Activity Diagram :
-     
-   • Class Diagram :
+   ### Activity Diagram
    
-   • Entity Relationship Diagram :
+   ![activityDiagramTambahProduk](https://user-images.githubusercontent.com/55394766/121841749-2e4b0400-cd09-11eb-8a73-49f5235f7997.jpeg)
+   
+   ![activityDiagramUbahProfile](https://user-images.githubusercontent.com/55394766/121841754-3014c780-cd09-11eb-88d7-b0021d8909b9.jpeg)
+   
+   ![activityDiagramUpdateStatus](https://user-images.githubusercontent.com/55394766/121841756-30ad5e00-cd09-11eb-9bc5-ee45a523a07e.jpeg)
+   
+   ![activityDiagramHapusProduk](https://user-images.githubusercontent.com/55394766/121841761-32772180-cd09-11eb-946d-9ee15adf9a20.jpeg)
+   
+   ![activityDiagramLihatDetailProduk](https://user-images.githubusercontent.com/55394766/121841764-330fb800-cd09-11eb-9a84-e4beb5db98f1.jpeg)
+   
+   ![activityDiagramLihatOrder](https://user-images.githubusercontent.com/55394766/121841765-33a84e80-cd09-11eb-8278-a62c18f6c6ba.jpeg)
+   
+   ![activityDiagramLogout](https://user-images.githubusercontent.com/55394766/121841766-3440e500-cd09-11eb-9b66-f22943edd072.jpeg)
+   
+   ![activityDiagramOrderProduk](https://user-images.githubusercontent.com/55394766/121841767-34d97b80-cd09-11eb-8c7d-c9338cf6a634.jpeg)
+   
+
+     
+   ### Class Diagram
+   
+   ### Entity Relationship Diagram
    
    ![ERD](https://user-images.githubusercontent.com/78836288/121841140-f4c5c900-cd07-11eb-85be-de424abe9db0.jpeg)
     
-   • Arsitektur Sistem : 
+   ### Arsitektur Sistem 
     
-   • Fungsi Utama yang Dikembangkan :
+   ### Fungsi Utama yang Dikembangkan
     
-   • Fungsi CRUD :
-   
+   ### Fungsi CRUD
+  
    ![CRUD_1](https://user-images.githubusercontent.com/55394766/121839240-d78efb80-cd03-11eb-8fe3-196ea152273d.png)
    
    ![CRUD_2](https://user-images.githubusercontent.com/55394766/121839248-d958bf00-cd03-11eb-9cda-a3d73d067c0d.png)
 
 ## Hasil Implementasi 
-   • Screenshot Sistem
+   ### Screenshot Sistem
     
-   • Link Aplikasi (klo dah deploy)
+   ### Link Aplikasi (klo dah deploy)
 
-## Testing :
+## Testing
    • Positive Cases
    
    • Negative Cases (jika ada)
