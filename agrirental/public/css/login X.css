@@ -16,7 +16,7 @@ img.logo {
 .loginForm {
     width: 280px;
     position: absolute;
-    margin-top: 150px;
+    margin-top: 169px;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -93,7 +93,7 @@ button:hover span {
     text-decoration: none;
 }
 
-.loginForm a::after {
+.ddaftar::after {
     content: '';
     height: 3px;
     width: 0;
@@ -106,6 +106,12 @@ button:hover span {
 
 .loginForm a:hover::after {
     width: 100%;
+}
+.salah a {
+    margin-left: 40px;
+    margin-top: -26px;
+    color: #B40000;
+    position: absolute;
 }
 
 @media screen and (max-width: 600px) {
