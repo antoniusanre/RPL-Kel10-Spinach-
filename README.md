@@ -121,13 +121,21 @@
    ![arsitekturSistem](https://user-images.githubusercontent.com/55394766/121969905-83395980-cd9f-11eb-8a01-189e1f4ff086.jpeg)
    
    ### Fungsi Utama yang Dikembangkan
-   • Pengguna dapat membuat akun
-   
-   • Pengguna (penyewa) dapat menyewakan kendaraannya di agrirental serta dapat mengubah informasi sewaktu-waktu tentang kendaraanna yang disewakan
-   
-   • Status barang yang disewakan dipegang penuh oleh penyewa 
-   
-   • Pengguna (pelanggan) dapat mencari kendaraan yang diinginkan dengan kolom search bar
+   Penyewa
+   • Membuat akun
+   • Membuat pesanan
+   • Melihat deskripsi produk
+   • Melihat deskripsi pesanan
+   • Update status pemesanan
+   • Update informasi akun
+   • Menghapus akun
+   Rental
+   • Membuat akun
+   • Menambahkan produk
+   • Melihat informasi pesanan
+   • Update deskripsi produk
+   • Menghapus akun
+   • Menghapus produk
    
     
    ### Fungsi CRUD
