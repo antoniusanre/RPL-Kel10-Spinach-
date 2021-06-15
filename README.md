@@ -138,7 +138,15 @@
 
 ## Hasil Implementasi 
    ### Screenshot Sistem
-    
+   
+  ![landing](https://user-images.githubusercontent.com/55394766/121990082-644ebd80-cdc7-11eb-9879-d70299075641.jpeg)
+  
+  ![orderSaya](https://user-images.githubusercontent.com/55394766/121990100-6d3f8f00-cdc7-11eb-880b-0dc9d32b6d90.jpeg)
+  
+  ![order](https://user-images.githubusercontent.com/55394766/121990103-6fa1e900-cdc7-11eb-9676-12b224c319f9.jpeg)
+  
+  ![infoProduk](https://user-images.githubusercontent.com/55394766/121990117-73ce0680-cdc7-11eb-877b-2e66a904b9a4.jpeg)
+
    ### Link Aplikasi
    
    http://agrirental.infinityfreeapp.com/
