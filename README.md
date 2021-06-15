@@ -122,19 +122,33 @@
    
    ### Fungsi Utama yang Dikembangkan
    Penyewa
+   
    • Membuat akun
+   
    • Membuat pesanan
+   
    • Melihat deskripsi produk
+   
    • Melihat deskripsi pesanan
+   
    • Update status pemesanan
+   
    • Update informasi akun
+   
    • Menghapus akun
+   
    Rental
+   
    • Membuat akun
+   
    • Menambahkan produk
+   
    • Melihat informasi pesanan
+   
    • Update deskripsi produk
+   
    • Menghapus akun
+   
    • Menghapus produk
    
     
