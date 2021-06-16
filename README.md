@@ -106,6 +106,7 @@
    ![activityDiagramLogout](https://user-images.githubusercontent.com/55394766/121841766-3440e500-cd09-11eb-9b66-f22943edd072.jpeg)
    
    #### • Order Produk
+   
    ![activityDiagramOrderProduk](https://user-images.githubusercontent.com/55394766/121841767-34d97b80-cd09-11eb-8c7d-c9338cf6a634.jpeg)
    
    ### Class Diagram
@@ -114,7 +115,7 @@
    
    ### Entity Relationship Diagram
    
-   ![ERD_2](https://user-images.githubusercontent.com/55394766/121966663-394d7500-cd99-11eb-9360-02a6b683caeb.jpeg)
+   ![ERD](https://user-images.githubusercontent.com/55394766/122194466-abb87500-cebf-11eb-9bf9-fd546b8a7d5c.jpeg)
     
    ### Arsitektur Sistem 
    
